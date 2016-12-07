@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl">
+    <Prefix name="" IRI="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <ObjectProperty IRI="#has_status"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_base"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Low_value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_extra"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#modifier_property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Off_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Domain_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tracking_extra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medium_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Apisense_sensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor_extra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#High_value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relational_property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Emotion_extra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recognition_extra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Level_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#None_value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_level"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Accuracy_base"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#On_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Group_extra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Camera_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#State_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Timestamp_base"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor_base"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_recognition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Beacon_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Battery_base"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location_base"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location_extra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Position_extra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gesture_extra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Status_base"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Independent_entity"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Accuracy_base"/>
+        <Class IRI="#Sensor_base"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Apisense_sensor"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Battery_base"/>
+        <Class IRI="#Sensor_base"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beacon_sensor"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Camera_sensor"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emotion_extra"/>
+        <Class IRI="#Recognition_extra"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gesture_extra"/>
+        <Class IRI="#Recognition_extra"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Group_extra"/>
+        <Class IRI="#Recognition_extra"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#High_value"/>
+        <Class IRI="#Level_value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Independent_entity"/>
+        <Class IRI="#Domain_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Level_value"/>
+        <Class IRI="#Value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Level_value"/>
+        <ObjectUnionOf>
+            <Class IRI="#High_value"/>
+            <Class IRI="#Low_value"/>
+            <Class IRI="#Medium_value"/>
+            <Class IRI="#None_value"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location_base"/>
+        <Class IRI="#Sensor_base"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location_extra"/>
+        <Class IRI="#Sensor_extra"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Low_value"/>
+        <Class IRI="#Level_value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medium_value"/>
+        <Class IRI="#Level_value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#None_value"/>
+        <Class IRI="#Level_value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Off_value"/>
+        <Class IRI="#State_value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#On_value"/>
+        <Class IRI="#State_value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Position_extra"/>
+        <Class IRI="#Location_extra"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recognition_extra"/>
+        <Class IRI="#Sensor_extra"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sensor"/>
+        <Class IRI="#Independent_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sensor_base"/>
+        <Class IRI="#Independent_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sensor_extra"/>
+        <Class IRI="#Independent_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#State_value"/>
+        <Class IRI="#Value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#State_value"/>
+        <ObjectUnionOf>
+            <Class IRI="#Off_value"/>
+            <Class IRI="#On_value"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Status_base"/>
+        <Class IRI="#Sensor_base"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timestamp_base"/>
+        <Class IRI="#Sensor_base"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tracking_extra"/>
+        <Class IRI="#Location_extra"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Value"/>
+        <Class IRI="#Domain_entity"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Accuracy_base"/>
+        <Class IRI="#Battery_base"/>
+        <Class IRI="#Location_base"/>
+        <Class IRI="#Status_base"/>
+        <Class IRI="#Timestamp_base"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Emotion_extra"/>
+        <Class IRI="#Gesture_extra"/>
+        <Class IRI="#Group_extra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#High_value"/>
+        <Class IRI="#Low_value"/>
+        <Class IRI="#Medium_value"/>
+        <Class IRI="#None_value"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Independent_entity"/>
+        <Class IRI="#Value"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Level_value"/>
+        <Class IRI="#State_value"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Location_extra"/>
+        <Class IRI="#Recognition_extra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Off_value"/>
+        <Class IRI="#On_value"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Position_extra"/>
+        <Class IRI="#Tracking_extra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Sensor"/>
+        <Class IRI="#Sensor_base"/>
+        <Class IRI="#Sensor_extra"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_base"/>
+        <ObjectProperty IRI="#relational_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_extra"/>
+        <ObjectProperty IRI="#relational_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_level"/>
+        <ObjectProperty IRI="#modifier_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_location"/>
+        <ObjectProperty IRI="#relational_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_recognition"/>
+        <ObjectProperty IRI="#relational_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_status"/>
+        <ObjectProperty IRI="#modifier_property"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#has_base"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#has_level"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#has_status"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#has_base"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#has_extra"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#has_location"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#has_recognition"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_base"/>
+        <Class IRI="#Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_extra"/>
+        <Class IRI="#Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_level"/>
+        <Class IRI="#Battery_base"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_location"/>
+        <Class IRI="#Sensor_extra"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_recognition"/>
+        <Class IRI="#Sensor_extra"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_status"/>
+        <Class IRI="#Status_base"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_base"/>
+        <Class IRI="#Sensor_base"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_extra"/>
+        <Class IRI="#Sensor_extra"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_level"/>
+        <Class IRI="#Level_value"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_location"/>
+        <Class IRI="#Location_extra"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_recognition"/>
+        <Class IRI="#Recognition_extra"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_status"/>
+        <Class IRI="#State_value"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
