@@ -38,6 +38,15 @@ Other definitions
 - [Ontology Development 101: A Guide to Creating Your First Ontology](http://protege.stanford.edu/publications/ontology_development/ontology101.pdf) - Stanford
 
 ## Ontology
+The StoreConnect sensor ontologies is composed of the following core classes:
+<dl>
+<dt>Sensor_base</dt>
+<dd></dd>
+<dt>Sensor_extra</dt>
+<dd></dd>
+<dt>Sensor</dt>
+<dd></dd>
+</dl>
 
 ![Ontology](images/ontology.png)
 
