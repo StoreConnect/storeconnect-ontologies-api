@@ -39,16 +39,27 @@ Other definitions
 
 ## Ontology
 The StoreConnect sensor ontologies is composed of the following core classes:
-<dl>
-<dt>Sensor_base</dt>
-<dd></dd>
-<dt>Sensor_extra</dt>
-<dd></dd>
-<dt>Sensor</dt>
-<dd></dd>
-</dl>
+
+__Sensor__
+It's the key node of our ontology. Every available sensor is a `Sensor`. From this node, we can access all properties.</dd>
+
+__Sensor_base__
+This node gives access to all the basic properties common to every sensors such as, `battery level`, `current time`, `physical position` etc. Those properties goal is to tag data pushed by sensors or simply control / configure them. Example:
+
+__Sensor_extra__
+Contains specifics capacities of sensors, some may have `location`, some `recognition` and others none of them such as RFID.
+
+- Recognition
+Matches with the cameras, this node gives access to different concepts such as detecting some groups (size, gender..), some gestures (take, drop, focus on..) or some emotions (happy, neutral...)
+
+- Location
+Gives access to concepts such as user tracking..
 
 ![Ontology](images/ontology.png)
+
+### Data representation
+
+We suggest using [JSON-LD](https://en.wikipedia.org/wiki/JSON-LD) as representation format. You can find an example [there](http://musicontology.com/docs/getting-started.html).
 
 ## How to contribute
 
