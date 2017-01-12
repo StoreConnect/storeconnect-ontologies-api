@@ -39,16 +39,47 @@ Other definitions
 
 ## Ontology
 The StoreConnect sensor ontologies is composed of the following core classes:
-<dl>
-<dt>Sensor_base</dt>
-<dd></dd>
-<dt>Sensor_extra</dt>
-<dd></dd>
-<dt>Sensor</dt>
-<dd></dd>
-</dl>
+
+__Sensor__
+It's the key node of our ontology. Every available sensor is a `Sensor`. From this node, we can access all properties.</dd>
+
+__Sensor_base__
+This node gives access to all the basic properties common to every sensors such as, `battery level`, `current time`, `physical position` etc. Those properties goal is to tag data pushed by sensors or simply control / configure them. Example:
+
+__Sensor_extra__
+Contains specifics capacities of sensors, some may have `location`, some `recognition` and others none of them such as RFID.
+
+- Recognition
+Matches with the cameras, this node gives access to different concepts such as detecting some groups (size, gender..), some gestures (take, drop, focus on..) or some emotions (happy, neutral...)
+
+- Location
+Gives access to concepts such as user tracking..
 
 ![Ontology](images/ontology.png)
+
+### Data representation
+
+The JSON below is an open proposition on the data pushed by sensors API.
+
+```json
+{
+	"metadata": {
+		"timestamp": "1977-04-22T01:00:00-05:00",
+		"state": "ENABLED",
+		"battery": "42",
+		"position": {
+			
+		}
+	},
+	"detected": {
+		"user": "110e8400-e29b-11d4-a716-446655440000",
+		"do": {
+			"action": "TAKE",
+			"what": "ARTICLE_REF"
+		}
+	}
+}
+```
 
 ## How to contribute
 
