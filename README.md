@@ -38,7 +38,7 @@ Other definitions
 - [Ontology Development 101: A Guide to Creating Your First Ontology](http://protege.stanford.edu/publications/ontology_development/ontology101.pdf) - Stanford
 
 ## Ontology
-The StoreConnect sensor ontologies is composed of the following core classes:
+In order to illustrate the components that constitute an ontology, we sketch below the very first draft of what the StoreConnect sensor ontology could be. This example is not meant to the complete (we still have to discuss many points about it), but to illustrate the concepts introduced beneath. This ontology is composed of the following core classes:
 
 __Sensor__
 It's the key node of our ontology. Every available sensor is a `Sensor`. From this node, we can access all properties.</dd>
