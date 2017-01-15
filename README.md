@@ -38,7 +38,10 @@ Other definitions
 - [Ontology Development 101: A Guide to Creating Your First Ontology](http://protege.stanford.edu/publications/ontology_development/ontology101.pdf) - Stanford
 
 ## Ontology
-In order to illustrate the components that constitute an ontology, we sketch below the very first draft of what the StoreConnect sensor ontology could be. This example is not meant to the complete (we still have to discuss many points about it), but to illustrate the concepts introduced beneath. This ontology is composed of the following core classes:
+
+### Classes
+
+In order to illustrate the components that constitute an ontology, we sketch below the very first draft of what the StoreConnect sensor ontology could be. This example is not meant to the complete (we still have to discuss many points about it), but to illustrate the concepts introduced beneath. This ontology is composed of the three following core classes: __Sensor__, __Sensor_base__, and __Sensor__extra__.
 
 __Sensor__
 It's the key node of our ontology. Every available sensor is a `Sensor`. From this node, we can access all properties.</dd>
@@ -56,6 +59,12 @@ Matches with the cameras, this node gives access to different concepts such as d
 Gives access to concepts such as user tracking..
 
 ![Ontology](images/ontology.png)
+
+### Relations
+
+Two kinds of relations are defined between these core classes: plain arrows denote relations of tyoe extension, and dotted arrows denote relations of type constraints.
+
+The idea behind the notion of extension is to allow refining a concept. For example, the class __Sensor__ is extended by __Beacon_sensor__, __Apisense_sensor__, and __Camera_sensor__. The idea is to capture in the class __Sensor__ the characteristics that are common to all sensors, and to provide a subconcept for each kind of different sensors. By the same way, the three core classes __Sensor__, __Sensor_base__, and __Sensor__extra__, extend __Independent_entity__ that is a root, application-independent class, for all ontologies.
 
 ### Data representation
 
