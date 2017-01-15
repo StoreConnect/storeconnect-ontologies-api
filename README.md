@@ -45,7 +45,7 @@ Other definitions
 
 ### Classes
 
-In order to illustrate the components that constitute an ontology, we sketch below the very first draft of what the StoreConnect sensor ontology could be. This example is not meant to the complete (we still have to discuss many points about it), but to illustrate the concepts introduced beneath. This ontology is composed of the three following core classes: __Sensor__, __Sensor_base__, and __Sensor__extra__.
+In order to illustrate the components that constitute an ontology, we sketch below the very first draft of what the StoreConnect sensor ontology could be. This example is not meant to the complete (we still have to discuss many points about it), but to illustrate the concepts introduced beneath. This ontology is composed of the three following core classes: __Sensor__, __Sensor_base__, and __Sensor_extra__.
 
 __Sensor__
 It's the key node of our ontology. Every available sensor is a `Sensor`. From this node, we can access all properties.</dd>
@@ -68,7 +68,7 @@ Gives access to concepts such as user tracking.
 
 Two kinds of relations are defined between these core classes: plain arrows denote relations of type extension, and dotted arrows denote relations of type constraints.
 
-The idea behind the notion of extension is to allow refining a concept. For example, the class __Sensor__ is extended by __Beacon_sensor__, __Apisense_sensor__, and __Camera_sensor__. The idea is to capture in the class __Sensor__ the characteristics that are common to all sensors, and to provide a subconcept for each kind of different sensors. By the same way, the three core classes __Sensor__, __Sensor_base__, and __Sensor__extra__, extend __Independent_entity__ that is a root, application-independent class, for all ontologies.
+The idea behind the notion of extension is to allow refining a concept. For example, the class __Sensor__ is extended by __Beacon_sensor__, __Apisense_sensor__, and __Camera_sensor__. The idea is to capture in the class __Sensor__ the characteristics that are common to all sensors, and to provide a subconcept for each kind of different sensors. By the same way, the three core classes __Sensor__, __Sensor_base__, and __Sensor_extra__, extend __Independent_entity__ that is a root, application-independent class, for all ontologies.
 
 Relations of type constraint denote dependencies other than the notion of subconcept. For example, __Sensor_base__ is related to __Sensor__. This relation denotes the idea that every sensor _has_ some basic characteristics whose root class is __Sensor_base__. This class is itself refined into the three subconcepts __Timestamp_base__, __Location_base__, and __Accurary_base__.
 
