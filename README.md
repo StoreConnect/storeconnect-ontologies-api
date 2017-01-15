@@ -2,6 +2,10 @@
 
 This ontology describe the sensors ontology relative to the FUI Project [StoreConnect](https://github.com/StoreConnect).
 
+v1.0: Initial version of the documents
+
+Authors: Julien Duribreux, Romain Rouvoy, Lionel Seinturier (Inria Lille).
+
 ## Definition
 [Wikipedia](https://fr.wikipedia.org/wiki/Ontologie_(informatique)) defines an ontology as follows:
 > "In computer science and information science, an ontology is a formal naming and definition of the types, properties, and interrelationships of the entities that really or fundamentally exist for a particular domain of discourse. It is thus a practical application of philosophical ontology, with a taxonomy.
