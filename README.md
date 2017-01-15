@@ -53,10 +53,10 @@ __Sensor_extra__
 Contains specifics capacities of sensors, some may have `location`, some `recognition` and others none of them such as RFID.
 
 - Recognition
-Matches with the cameras, this node gives access to different concepts such as detecting some groups (size, gender..), some gestures (take, drop, focus on..) or some emotions (happy, neutral...)
+Matches with the cameras, this node gives access to different concepts such as detecting some groups (size, gender, etc.), some gestures (take, drop, focus on, etc.) or some emotions (happy, neutral, etc.).
 
 - Location
-Gives access to concepts such as user tracking..
+Gives access to concepts such as user tracking.
 
 ![Ontology](images/ontology.png)
 
