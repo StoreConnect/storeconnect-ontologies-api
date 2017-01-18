@@ -96,8 +96,16 @@ The JSON below is an open proposition on the data pushed by sensors API.
 }
 ```
 
+## Queries
+
+One of the goals of the ontology is to be able to serve as a support to answer high-level semantical queries that are related to the sensors of the StoreConnect platform.
+
+The list of queries that we may want to answer follows. This list is not closed and this document will serve as a way to collect them. The purpose is also that these queries serve as requirement to assess the completeness of the ontology.
+
+- What are the sensors that can provide the information about the path taken by a specific, given his name (or id), customer?
+
+
 ## How to contribute
 
 You can contribute to this ontology using [Protégé](http://protege.stanford.edu/) and summit your request within a `pull request` 
 following the [contributing](CONTRIBUTING.md) instructions. 
-
