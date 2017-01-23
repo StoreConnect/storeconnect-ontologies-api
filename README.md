@@ -2,6 +2,10 @@
 
 This ontology describe the sensors ontology relative to the FUI Project [StoreConnect](https://github.com/StoreConnect).
 
+v1.0: Initial version of the documents
+
+Authors: Julien Duribreux, Romain Rouvoy, Lionel Seinturier (Inria Lille).
+
 ## Definition
 [Wikipedia](https://fr.wikipedia.org/wiki/Ontologie_(informatique)) defines an ontology as follows:
 > "In computer science and information science, an ontology is a formal naming and definition of the types, properties, and interrelationships of the entities that really or fundamentally exist for a particular domain of discourse. It is thus a practical application of philosophical ontology, with a taxonomy.
@@ -38,7 +42,10 @@ Other definitions
 - [Ontology Development 101: A Guide to Creating Your First Ontology](http://protege.stanford.edu/publications/ontology_development/ontology101.pdf) - Stanford
 
 ## Ontology
-The StoreConnect sensor ontologies is composed of the following core classes:
+
+### Classes
+
+In order to illustrate the components that constitute an ontology, we sketch below the very first draft of what the StoreConnect sensor ontology could be. This example is not meant to the complete (we still have to discuss many points about it), but to illustrate the concepts introduced beneath. This ontology is composed of the three following core classes: __Sensor__, __Sensor_base__, and __Sensor_extra__.
 
 __Sensor__
 It's the key node of our ontology. Every available sensor is a `Sensor`. From this node, we can access all properties.</dd>
@@ -50,19 +57,54 @@ __Sensor_extra__
 Contains specifics capacities of sensors, some may have `location`, some `recognition` and others none of them such as RFID.
 
 - Recognition
-Matches with the cameras, this node gives access to different concepts such as detecting some groups (size, gender..), some gestures (take, drop, focus on..) or some emotions (happy, neutral...)
+Matches with the cameras, this node gives access to different concepts such as detecting some groups (size, gender, etc.), some gestures (take, drop, focus on, etc.) or some emotions (happy, neutral, etc.).
 
 - Location
-Gives access to concepts such as user tracking..
+Gives access to concepts such as user tracking.
 
 ![Ontology](images/ontology.png)
 
+### Relations
+
+Two kinds of relations are defined between these core classes: plain arrows denote relations of type extension, and dotted arrows denote relations of type constraints.
+
+The idea behind the notion of extension is to allow refining a concept. For example, the class __Sensor__ is extended by __Beacon_sensor__, __Apisense_sensor__, and __Camera_sensor__. The idea is to capture in the class __Sensor__ the characteristics that are common to all sensors, and to provide a subconcept for each kind of different sensors. By the same way, the three core classes __Sensor__, __Sensor_base__, and __Sensor_extra__, extend __Independent_entity__ that is a root, application-independent class, for all ontologies.
+
+Relations of type constraint denote dependencies other than the notion of subconcept. For example, __Sensor_base__ is related to __Sensor__. This relation denotes the idea that every sensor _has_ some basic characteristics whose root class is __Sensor_base__. This class is itself refined into the three subconcepts __Timestamp_base__, __Location_base__, and __Accurary_base__.
+
 ### Data representation
 
-We suggest using [JSON-LD](https://en.wikipedia.org/wiki/JSON-LD) as representation format. You can find an example [there](http://musicontology.com/docs/getting-started.html).
+The JSON below is an open proposition on the data pushed by sensors API.
+
+```json
+{
+	"metadata": {
+		"timestamp": "1977-04-22T01:00:00-05:00",
+		"state": "ENABLED",
+		"battery": "42",
+		"position": {
+			
+		}
+	},
+	"detected": {
+		"user": "110e8400-e29b-11d4-a716-446655440000",
+		"do": {
+			"action": "TAKE",
+			"what": "ARTICLE_REF"
+		}
+	}
+}
+```
+
+## Queries
+
+One of the goals of the ontology is to be able to serve as a support to answer high-level semantical queries that are related to the sensors of the StoreConnect platform.
+
+The list of queries that we may want to answer follows. This list is not closed and this document will serve as a way to collect them. The purpose is also that these queries serve as requirement to assess the completeness of the ontology.
+
+- What are the sensors that can provide the information about the path taken by a specific, given his name (or id), customer?
 
 ## How to contribute
 
 You can contribute to this ontology using [Protégé](http://protege.stanford.edu/) and summit your request within a `pull request` 
 following the [contributing](CONTRIBUTING.md) instructions. 
-
