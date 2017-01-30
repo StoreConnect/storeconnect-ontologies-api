@@ -12,6 +12,8 @@ _Process_:
 3. Be sure to join a visualization of your ontology.
 4. Summit your work as a pull request.
 
+Be sure to export you ontology in `RDF/XML Format` . Jena Fuseki doesn't handle every `owl` format and might fail to load th new ontology.
+
 ## Docker deployment
 
 ### Introduction
@@ -50,7 +52,7 @@ Or update it
 
 Next we need to create our fuseki container and bind it to its persistance volume location.
 ```
-✗ sudo docker run -d --name fuseki -p 3030:3030 -v /path/to/sensors-ontology/data:/fuseki storeconnect/sensor-ontology
+✗ sudo docker run -d --name fuseki -p 80:3030 -v /path/to/sensors-ontology/data:/fuseki storeconnect/sensor-ontology
 ```
 
 Before going any further check your admin password running the following command. You will need it to administrate your database.
