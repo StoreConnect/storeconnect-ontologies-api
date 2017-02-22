@@ -104,7 +104,6 @@ The list of queries that we may want to answer follows. This list is not closed 
 
 - What are the sensors that can provide the information about the path taken by a specific, given his name (or id), customer?
 
-
 ## How to contribute
 
 You can contribute to this ontology using [Protégé](http://protege.stanford.edu/) and summit your request within a `pull request` 
