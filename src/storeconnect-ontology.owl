@@ -1,0 +1,761 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/aurel/ontologies/2017/8/untitled-ontology-5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/aurel/ontologies/2017/8/untitled-ontology-5">
+    <Prefix name="" IRI="http://www.semanticweb.org/aurel/ontologies/2017/8/untitled-ontology-5#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <ObjectProperty IRI="#buys"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isComposedOf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Technical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HairSize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShopCEL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BehavorialTrait"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Apisense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Seller"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CEL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dimension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensorRelated"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HairColor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pull"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InitialTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Timestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HairStyle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EyeColor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkinColor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Identifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Walking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProductRelated"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActorRelated"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensorData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SourceIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClimateAcceptance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAssociatedTo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Emotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Business"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AcC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CELRelated"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weather"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AisleManager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Camera"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Trolley"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stroller"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TimestampRelated"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capacity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#owns"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Beacon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ShoppingBag"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShopRelated"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nothing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Route"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SyncedTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Area"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#browses"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IdentifierRelated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#produces"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coordinates"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interaction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Family"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AcCCEL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TargetIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeometricRelated"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Push"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AcP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interactsWith"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RouteRelated"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Trait"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Segment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Timestamped"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Identified"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalTrait"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AcC"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AcC"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#buys"/>
+            <Class IRI="#Product"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AcC"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#owns"/>
+            <Class IRI="#CEL"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AcCCEL"/>
+        <Class IRI="#CEL"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AcP"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actor"/>
+        <Class IRI="#ActorRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actor"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Human"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actor"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Role"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActorRelated"/>
+        <Class IRI="#Business"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Area"/>
+        <Class IRI="#ShopRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Area"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Coordinates"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BehavorialTrait"/>
+        <Class IRI="#Trait"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Business"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CEL"/>
+        <Class IRI="#CELRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CEL"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Dimension"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CELRelated"/>
+        <Class IRI="#Business"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capacity"/>
+        <Class IRI="#GeometricRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capacity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Dimension"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capacity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Weight"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClimateAcceptance"/>
+        <Class IRI="#ProductRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClimateAcceptance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Weather"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coordinates"/>
+        <Class IRI="#GeometricRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dimension"/>
+        <Class IRI="#GeometricRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emotion"/>
+        <Class IRI="#BehavorialTrait"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emotion"/>
+        <Class IRI="#SensorData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EyeColor"/>
+        <Class IRI="#PhysicalTrait"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EyeColor"/>
+        <Class IRI="#SensorData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Family"/>
+        <Class IRI="#ProductRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Family"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Product"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Family"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isAssociatedTo"/>
+            <Class IRI="#ClimateAcceptance"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gender"/>
+        <Class IRI="#PhysicalTrait"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gender"/>
+        <Class IRI="#SensorData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeometricRelated"/>
+        <Class IRI="#Technical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HairColor"/>
+        <Class IRI="#HairStyle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HairSize"/>
+        <Class IRI="#HairStyle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HairStyle"/>
+        <Class IRI="#PhysicalTrait"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HairStyle"/>
+        <Class IRI="#SensorData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <Class IRI="#ActorRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#browses"/>
+            <Class IRI="#Route"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#interactsWith"/>
+            <Class IRI="#Interaction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Trait"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identified"/>
+        <Class IRI="#IdentifierRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identified"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#SourceIdentifier"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identified"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#TargetIdentifier"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identifier"/>
+        <Class IRI="#IdentifierRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IdentifierRelated"/>
+        <Class IRI="#Technical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InitialTimestamp"/>
+        <Class IRI="#Timestamp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interaction"/>
+        <Class IRI="#ActorRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nothing"/>
+        <Class IRI="#CEL"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalTrait"/>
+        <Class IRI="#Trait"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Point"/>
+        <Class IRI="#SensorData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Point"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Coordinates"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product"/>
+        <Class IRI="#ProductRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isAssociatedTo"/>
+            <Class IRI="#Family"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Capacity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProductRelated"/>
+        <Class IRI="#Business"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pull"/>
+        <Class IRI="#Interaction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Push"/>
+        <Class IRI="#Interaction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Role"/>
+        <Class IRI="#ActorRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Route"/>
+        <Class IRI="#RouteRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Route"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Segment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Route"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isAssociatedTo"/>
+            <Class IRI="#Human"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RouteRelated"/>
+        <Class IRI="#Business"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Segment"/>
+        <Class IRI="#RouteRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sensor"/>
+        <Class IRI="#SensorRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sensor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#produces"/>
+            <Class IRI="#SensorData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorData"/>
+        <Class IRI="#Identified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorData"/>
+        <Class IRI="#SensorRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorData"/>
+        <Class IRI="#Timestamped"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorRelated"/>
+        <Class IRI="#Technical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shop"/>
+        <Class IRI="#ShopRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shop"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isAssociatedTo"/>
+            <Class IRI="#Weather"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shop"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Area"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShopCEL"/>
+        <Class IRI="#CEL"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShopRelated"/>
+        <Class IRI="#Business"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkinColor"/>
+        <Class IRI="#PhysicalTrait"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkinColor"/>
+        <Class IRI="#SensorData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SourceIdentifier"/>
+        <Class IRI="#Identifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stop"/>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SyncedTimestamp"/>
+        <Class IRI="#Timestamp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TargetIdentifier"/>
+        <Class IRI="#Identifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Technical"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timestamp"/>
+        <Class IRI="#TimestampRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TimestampRelated"/>
+        <Class IRI="#Technical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timestamped"/>
+        <Class IRI="#TimestampRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timestamped"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#InitialTimestamp"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timestamped"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#SyncedTimestamp"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trait"/>
+        <Class IRI="#ActorRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Walking"/>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weather"/>
+        <Class IRI="#SensorData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weight"/>
+        <Class IRI="#GeometricRelated"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#AcP"/>
+        <NamedIndividual IRI="#AisleManager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sensor"/>
+        <NamedIndividual IRI="#Apisense"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sensor"/>
+        <NamedIndividual IRI="#Beacon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sensor"/>
+        <NamedIndividual IRI="#Camera"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AcP"/>
+        <NamedIndividual IRI="#Seller"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AcCCEL"/>
+        <NamedIndividual IRI="#ShoppingBag"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AcCCEL"/>
+        <NamedIndividual IRI="#Stroller"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ShopCEL"/>
+        <NamedIndividual IRI="#Trolley"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#browses"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#buys"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#interactsWith"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isComposedOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#produces"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isAssociatedTo"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#browses"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#buys"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isComposedOf"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#owns"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#produces"/>
+    </AsymmetricObjectProperty>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Area</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">attributes:
+- area
+- startCoordinates</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
