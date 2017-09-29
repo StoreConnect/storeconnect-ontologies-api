@@ -57,6 +57,7 @@ function enhanceConceptDefinition {
 function enhanceConceptInteraction {
     sed "s/\(.*\)\[label=\"\(.*\)(Subclass all)\"\]/\1\[color=$conceptInteractionColor; fontcolor=$conceptInteractionColor; label=\"\2 (1)\"\]/" "$owlFile" > "$owlFileTmp" && mv "$owlFileTmp" "$owlFile"
     sed "s/\(.*\)\[label=\"\(.*\)(Subclass some)\"\]/\1\[color=$conceptInteractionColor; fontcolor=$conceptInteractionColor; label=\"\2 (1..n)\"\]/" "$owlFile" > "$owlFileTmp" && mv "$owlFileTmp" "$owlFile"
+    sed "s/\(.*\)\[label=\"\(.* (.*)\)\"\]/\1\[color=$conceptInteractionColor; fontcolor=$conceptInteractionColor; label=\"\2\"\]/" "$owlFile" > "$owlFileTmp" && mv "$owlFileTmp" "$owlFile"
 }
 
 function enhanceDisabledItems {
@@ -103,7 +104,7 @@ function addLegend {
 function enhanceOwlFile {
     enhanceConceptDefinition
     enhanceConceptInteraction
-    enhanceDisabledItems
+    #enhanceDisabledItems
     addLegend
 } 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl"
+<rdf:RDF xmlns="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#"
      xml:base="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -21,82 +21,12 @@
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#has_base -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#isComposedOf -->
 
-    <owl:ObjectProperty rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#has_base">
-        <rdfs:subPropertyOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#relational_property"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor"/>
-        <rdfs:range rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_base"/>
+    <owl:ObjectProperty rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#isComposedOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#has_extra -->
-
-    <owl:ObjectProperty rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#has_extra">
-        <rdfs:subPropertyOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#relational_property"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor"/>
-        <rdfs:range rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_extra"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#has_level -->
-
-    <owl:ObjectProperty rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#has_level">
-        <rdfs:subPropertyOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#modifier_property"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Battery_base"/>
-        <rdfs:range rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level_value"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#has_location -->
-
-    <owl:ObjectProperty rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#has_location">
-        <rdfs:subPropertyOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#relational_property"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_extra"/>
-        <rdfs:range rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location_extra"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#has_recognition -->
-
-    <owl:ObjectProperty rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#has_recognition">
-        <rdfs:subPropertyOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#relational_property"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_extra"/>
-        <rdfs:range rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition_extra"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#has_status -->
-
-    <owl:ObjectProperty rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#has_status">
-        <rdfs:subPropertyOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#modifier_property"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Status_base"/>
-        <rdfs:range rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#State_value"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#modifier_property -->
-
-    <owl:ObjectProperty rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#modifier_property"/>
-    
-
-
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#relational_property -->
-
-    <owl:ObjectProperty rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#relational_property"/>
     
 
 
@@ -111,183 +41,182 @@
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Accuracy_base -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Accuracy -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Accuracy_base">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_base"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Accuracy">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorBase"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Apisense_sensor -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Apisense -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Apisense_sensor">
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Apisense">
         <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Battery_base -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Battery -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Battery_base">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_base"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Battery">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorBase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Beacon_sensor -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Beacon -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Beacon_sensor">
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Beacon">
         <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Camera_sensor -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Business -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Camera_sensor">
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Business">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Entity"/>
+        <owl:disjointWith rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Technical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Camera -->
+
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Camera">
         <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Domain_entity -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Emotion -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Domain_entity"/>
-    
-
-
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Emotion_extra -->
-
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Emotion_extra">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition_extra"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Emotion">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Gesture_extra -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Entity -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Gesture_extra">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition_extra"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Entity"/>
+    
+
+
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Gesture -->
+
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Gesture">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Group_extra -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Group -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Group_extra">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition_extra"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Group">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#High_value -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#High -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#High_value">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level_value"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#High">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Independent_entity -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Independent_entity">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Domain_entity"/>
-        <owl:disjointWith rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Value"/>
-    </owl:Class>
-    
-
-
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level_value -->
-
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level_value">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Value"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Technical"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#High_value"/>
-                    <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Low_value"/>
-                    <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Medium_value"/>
-                    <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#None_value"/>
+                    <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#High"/>
+                    <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Low"/>
+                    <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Medium"/>
+                    <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#None"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#State_value"/>
+        <owl:disjointWith rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#State"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location_base -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location_base">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_base"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorBase"/>
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorExtra"/>
+        <owl:disjointWith rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location_extra -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Low -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location_extra">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_extra"/>
-        <owl:disjointWith rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition_extra"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Low">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Low_value -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Medium -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Low_value">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level_value"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Medium">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Medium_value -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#None -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Medium_value">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level_value"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#None">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#None_value -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Off -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#None_value">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Level_value"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Off">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#State"/>
+        <owl:disjointWith rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#On"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Off_value -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#On -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Off_value">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#State_value"/>
-        <owl:disjointWith rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#On_value"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#On">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#State"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#On_value -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Position -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#On_value">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#State_value"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Position">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location"/>
+        <owl:disjointWith rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Tracking"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Position_extra -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Position_extra">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location_extra"/>
-        <owl:disjointWith rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Tracking_extra"/>
-    </owl:Class>
-    
-
-
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition_extra -->
-
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition_extra">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_extra"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorExtra"/>
     </owl:Class>
     
 
@@ -295,36 +224,60 @@
     <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor -->
 
     <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Independent_entity"/>
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Business"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorExtra"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_base -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorBase -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_base">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Independent_entity"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorBase">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Business"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_extra -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorExtra -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_extra">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Independent_entity"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorExtra">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Business"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Recognition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#State_value -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#State -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#State_value">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Value"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#State">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Technical"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Off_value"/>
-                    <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#On_value"/>
+                    <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Off"/>
+                    <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#On"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -332,34 +285,40 @@
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Status_base -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Status -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Status_base">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_base"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Status">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorBase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Timestamp_base -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Technical -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Timestamp_base">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_base"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Technical">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Entity"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Tracking_extra -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Timestamp -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Tracking_extra">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location_extra"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Timestamp">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorBase"/>
     </owl:Class>
     
 
 
-    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Value -->
+    <!-- http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Tracking -->
 
-    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Value">
-        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Domain_entity"/>
+    <owl:Class rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Tracking">
+        <rdfs:subClassOf rdf:resource="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location"/>
     </owl:Class>
     
 
@@ -375,41 +334,41 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Accuracy_base"/>
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Battery_base"/>
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location_base"/>
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Status_base"/>
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Timestamp_base"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Accuracy"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Battery"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Location"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Status"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Timestamp"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Emotion_extra"/>
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Gesture_extra"/>
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Group_extra"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Emotion"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Gesture"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Group"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#High_value"/>
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Low_value"/>
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Medium_value"/>
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#None_value"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#High"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Low"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Medium"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#None"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor"/>
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_base"/>
-            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#Sensor_extra"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorBase"/>
+            <rdf:Description rdf:about="http://193.70.84.129:8000/ontologies/sensors/1.2.0/domain.owl#SensorExtra"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
