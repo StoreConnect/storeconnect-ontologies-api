@@ -73,26 +73,30 @@ function enhanceDisabledItems {
 function addLegend {
     legend="subgraph cluster_Legend {
                 graph [label=\"Legend\"]
-             
-                 Inheritance1 [label=\"Concept1\"]
-                 Inheritance2 [label=\"Concept2\"]
-                 Inheritance1 -> Inheritance2 [arrowhead=onormal; color=$inheritanceConceptColor; fontcolor=$inheritanceConceptColor; label=\"Concept1 extends Concept2\"]
                  
-                 Composition1 [label=\"Concept1\"]
-                 Composition2 [label=\"Concept2\"]
-                 Composition1 -> Composition2 [arrowhead=odiamond; color=$compositionConceptColor; fontcolor=$compositionConceptColor; label=\"Concept2 is composed of Concept1\"]
+                 Disable1 [label=\"Concept1\"; color=$disabledItemColor; fontcolor=$disabledItemColor]
+                 Disable2 [label=\"Concept2\"; color=$disabledItemColor; fontcolor=$disabledItemColor]
+                 Disable1 -> Disable2 [color=$disabledItemColor; fontcolor=$disabledItemColor; label=\"Not stable concepts and\/or integration\"]
+                 
+                 Interaction1 [label=\"Concept1\"]
+                 Interaction2 [label=\"Concept2\"]
+                 Interaction1 -> Interaction2 [color=$conceptInteractionColor; fontcolor=$conceptInteractionColor; label=\"Concept1 interacts with Concept2\"]
+             
+                 Instanciation1 [label=\"Concept1\"]
+                 Instanciation2 [label=\"Concept2\"]
+                 Instanciation1 -> Instanciation2 [color=$instanciationConceptColor; fontcolor=$instanciationConceptColor; label=\"Concept1 is an intance of Concept2\"]
                  
                  Association1 [label=\"Concept1\"]
                  Association2 [label=\"Concept2\"]
                  Association1 -> Association2 [color=$associationConceptColor; fontcolor=$associationConceptColor; label=\"Concept1 is associated to Concept2\"]
                  
-                 Instanciation1 [label=\"Concept1\"]
-                 Instanciation2 [label=\"Concept2\"]
-                 Instanciation1 -> Instanciation2 [color=$instanciationConceptColor; fontcolor=$instanciationConceptColor; label=\"Concept1 is an intance of Concept2\"]
+                 Composition1 [label=\"Concept1\"]
+                 Composition2 [label=\"Concept2\"]
+                 Composition1 -> Composition2 [arrowhead=odiamond; color=$compositionConceptColor; fontcolor=$compositionConceptColor; label=\"Concept2 is composed of Concept1\"]
                  
-                 Interaction1 [label=\"Concept1\"]
-                 Interaction2 [label=\"Concept2\"]
-                 Interaction1 -> Interaction2 [color=$conceptInteractionColor; fontcolor=$conceptInteractionColor; label=\"Concept1 interacts with Concept2\"]
+                 Inheritance1 [label=\"Concept1\"]
+                 Inheritance2 [label=\"Concept2\"]
+                 Inheritance1 -> Inheritance2 [arrowhead=onormal; color=$inheritanceConceptColor; fontcolor=$inheritanceConceptColor; label=\"Concept1 extends Concept2\"]
          }
     "
     # Remove new lines for sed
@@ -104,7 +108,7 @@ function addLegend {
 function enhanceOwlFile {
     enhanceConceptDefinition
     enhanceConceptInteraction
-    #enhanceDisabledItems
+    enhanceDisabledItems
     addLegend
 } 
 

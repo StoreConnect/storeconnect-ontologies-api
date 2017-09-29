@@ -1,5 +1,6 @@
 digraph g {
 	"Level" -> "Low"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
+	"Location" -> "Tracking"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"Technical" -> "Level"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"SensorExtra" -> "Location"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"SensorExtra" -> "Recognition"  [dir=back; arrowtail=odiamond; color=chartreuse3; fontcolor=chartreuse3; label="1..n"]
@@ -10,6 +11,7 @@ digraph g {
 	"Recognition" -> "Group"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"SensorBase" -> "Location"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"SensorBase" -> "Timestamp"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
+	"Location" -> "Position"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"Entity" -> "Technical"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"Technical" -> "State"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"Business" -> "SensorBase"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
@@ -27,9 +29,9 @@ digraph g {
 	"owl:Thing" -> "Entity"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"SensorBase" -> "Battery"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"Business" -> "SensorExtra"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
-	"Recognition" -> "Emotion"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"State" -> "Off"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
+	"Recognition" -> "Emotion"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"Sensor" -> "Apisense"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
 	"SensorExtra" -> "Location"  [dir=back; arrowtail=odiamond; color=chartreuse3; fontcolor=chartreuse3; label="1..n"]
 	"Level" -> "None"  [dir=back; arrowtail=onormal; color=chartreuse4; fontcolor=chartreuse4]
-subgraph cluster_Legend { graph [label="Legend"] Inheritance1 [label="Concept1"] Inheritance2 [label="Concept2"] Inheritance1 -> Inheritance2 [arrowhead=onormal; color=chartreuse4; fontcolor=chartreuse4; label="Concept1 extends Concept2"] Composition1 [label="Concept1"] Composition2 [label="Concept2"] Composition1 -> Composition2 [arrowhead=odiamond; color=chartreuse3; fontcolor=chartreuse3; label="Concept2 is composed of Concept1"] Association1 [label="Concept1"] Association2 [label="Concept2"] Association1 -> Association2 [color=darkolivegreen3; fontcolor=darkolivegreen3; label="Concept1 is associated to Concept2"] Instanciation1 [label="Concept1"] Instanciation2 [label="Concept2"] Instanciation1 -> Instanciation2 [color=springgreen4; fontcolor=springgreen4; label="Concept1 is an intance of Concept2"] Interaction1 [label="Concept1"] Interaction2 [label="Concept2"] Interaction1 -> Interaction2 [color=orangered4; fontcolor=orangered4; label="Concept1 interacts with Concept2"] } }
+subgraph cluster_Legend { graph [label="Legend"] Composition1 [label="Concept1"] Composition2 [label="Concept2"] Composition1 -> Composition2 [arrowhead=odiamond; color=chartreuse3; fontcolor=chartreuse3; label="Concept2 is composed of Concept1"] Inheritance1 [label="Concept1"] Inheritance2 [label="Concept2"] Inheritance1 -> Inheritance2 [arrowhead=onormal; color=chartreuse4; fontcolor=chartreuse4; label="Concept1 extends Concept2"] } }

@@ -34,9 +34,6 @@
         <Class IRI="#BehavorialTrait"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Apisense"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Seller"/>
     </Declaration>
     <Declaration>
@@ -73,6 +70,9 @@
         <Class IRI="#HairStyle"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Camera"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#EyeColor"/>
     </Declaration>
     <Declaration>
@@ -106,6 +106,9 @@
         <Class IRI="#Actor"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Beacon"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isAssociatedTo"/>
     </Declaration>
     <Declaration>
@@ -124,6 +127,9 @@
         <Class IRI="#AcC"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Apisense"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#CELRelated"/>
     </Declaration>
     <Declaration>
@@ -139,9 +145,6 @@
         <NamedIndividual IRI="#Stroller"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Camera"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Trolley"/>
     </Declaration>
     <Declaration>
@@ -152,9 +155,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#owns"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Beacon"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ShoppingBag"/>
@@ -247,10 +247,10 @@
         <Class IRI="#Human"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#RouteRelated"/>
+        <ObjectProperty IRI="#interactsWith"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#interactsWith"/>
+        <Class IRI="#RouteRelated"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Trait"/>
@@ -331,6 +331,10 @@
         <Class IRI="#HumanGroup"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Apisense"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Area"/>
         <Class IRI="#ShopRelated"/>
     </SubClassOf>
@@ -361,6 +365,10 @@
         <Class IRI="#Business"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Beacon"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#BehavorialTrait"/>
         <Class IRI="#Trait"/>
     </SubClassOf>
@@ -386,6 +394,10 @@
     <SubClassOf>
         <Class IRI="#CELRelated"/>
         <Class IRI="#AssetRelated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Camera"/>
+        <Class IRI="#Sensor"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Capacity"/>
@@ -835,18 +847,6 @@
     <ClassAssertion>
         <Class IRI="#AcP"/>
         <NamedIndividual IRI="#AisleManager"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sensor"/>
-        <NamedIndividual IRI="#Apisense"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sensor"/>
-        <NamedIndividual IRI="#Beacon"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sensor"/>
-        <NamedIndividual IRI="#Camera"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#AcP"/>
