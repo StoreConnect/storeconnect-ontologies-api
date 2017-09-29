@@ -1,3 +1,5 @@
+**Important note: This Readme is deprecated and has to be rewritten**
+
 # Sensors Ontologies
 
 This ontology describe the sensors ontology relative to the FUI Project [StoreConnect](https://github.com/StoreConnect).
