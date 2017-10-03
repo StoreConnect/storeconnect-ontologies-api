@@ -1,0 +1,1271 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://storeconnect/customer/0.1#"
+     xml:base="http://storeconnect/customer/0.1"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://storeconnect/customer/0.1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://storeconnect/customer/0.1#browses -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/customer/0.1#browses">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#buys -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/customer/0.1#buys">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#comesFrom -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/customer/0.1#comesFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://storeconnect/customer/0.1#produces"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#interactsWith -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/customer/0.1#interactsWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#isAssociatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/customer/0.1#isAssociatedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/customer/0.1#isComposedOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#isWithin -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/customer/0.1#isWithin"/>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#owns -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/customer/0.1#owns">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#produces -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/customer/0.1#produces">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#uses -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/customer/0.1#uses">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://storeconnect/customer/0.1#name -->
+
+    <owl:DatatypeProperty rdf:about="http://storeconnect/customer/0.1#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#timestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://storeconnect/customer/0.1#timestamp">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://storeconnect/customer/0.1#AcC -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#AcC">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#buys"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#owns"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#CEL"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#uses"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#CEL"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#AcP -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#AcP">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Actor -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Actor">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ActorRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#Human"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#ActorRelated -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#ActorRelated">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#AssetRelated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Age -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Age">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#PhysicalTrait"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#SensorData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Apisense -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Apisense">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Area -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Area">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ShopRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Coordinates"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>attributes:
+- area
+- startCoordinates</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Asset -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Asset">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#AssetRelated"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Identified"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#browses"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Route"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#AssetRelated -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#AssetRelated">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Business"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Beacon -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Beacon">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#BehavorialTrait -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#BehavorialTrait">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Trait"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Business -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Business">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#CEL -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#CEL">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Asset"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#CELRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#Dimension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#CELRelated -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#CELRelated">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#AssetRelated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Camera -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Camera">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Capacity -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Capacity">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#GeometricRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#Dimension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#Weight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Context -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Context">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ContextRelated"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#SensorData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#ContextAcceptance -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#ContextAcceptance">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ContextRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isAssociatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Context"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#ContextRelated -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#ContextRelated">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Business"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Coordinates -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Coordinates">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#GeometricRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isWithin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#Area"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Dimension -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Dimension">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#GeometricRelated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Emotion -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Emotion">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#BehavorialTrait"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#SensorData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Entity -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Entity"/>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#EyeColor -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#EyeColor">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#PhysicalTrait"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#SensorData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Frequency -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Frequency">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ScheduleRelated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Friends -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Friends">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#HumanGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Gender -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Gender">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#PhysicalTrait"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#SensorData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#GeometricRelated -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#GeometricRelated">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Technical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#HairColor -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#HairColor">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#HairStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#HairSize -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#HairSize">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#HairStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#HairStyle -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#HairStyle">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#PhysicalTrait"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#SensorData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Human -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Human">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ActorRelated"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#interactsWith"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Interaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Trait"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#HumanFamily -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#HumanFamily">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#HumanGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#HumanGroup -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#HumanGroup">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ActorRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isAssociatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#TraitGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Human"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Identified -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Identified">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#IdentifierRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Identifier -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Identifier">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#IdentifierRelated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#IdentifierRelated -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#IdentifierRelated">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Technical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#InitialStoreConnectTimestamp -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#InitialStoreConnectTimestamp">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#StoreConnectTimestamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Interaction -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Interaction">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ActorRelated"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Timestamped"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Old -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Old">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#TraitGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#PhysicalTrait -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#PhysicalTrait">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Trait"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Point -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Point">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#SensorData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#Coordinates"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Product -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Product">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Asset"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ProductRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isAssociatedTo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#ProductFamily"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#Capacity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#ProductFamily -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#ProductFamily">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ProductRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isAssociatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#ContextAcceptance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#ProductRelated -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#ProductRelated">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#AssetRelated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Pull -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Pull">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Interaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Push -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Push">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Interaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#StoreConnectTimestamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Role -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Role">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ActorRelated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Route -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Route">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#RouteRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Route"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Segment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isAssociatedTo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#RouteRelated -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#RouteRelated">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Business"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#ScheduleRelated -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#ScheduleRelated">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Technical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Scheduled -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Scheduled">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ScheduleRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#Frequency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Segment -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Segment">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#RouteRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Sensor -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Sensor">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#SensorRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#produces"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#SensorData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#SensorData -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#SensorData">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Identified"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Scheduled"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#SensorRelated"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Timestamped"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#comesFrom"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#SensorRelated -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#SensorRelated">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Technical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#SensorTimestamp -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#SensorTimestamp">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Timestamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Shop -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Shop">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ShopRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Area"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#owns"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#CEL"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#owns"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#ShopRelated -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#ShopRelated">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Business"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#SkinColor -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#SkinColor">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#PhysicalTrait"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#SensorData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Stop -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Stop">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#StoreConnectTimestamp -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#StoreConnectTimestamp">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Timestamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Technical -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Technical">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Timestamp -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Timestamp">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#TimestampRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#timestamp"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#TimestampRelated -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#TimestampRelated">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Technical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Timestamped -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Timestamped">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#TimestampRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#InitialStoreConnectTimestamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#SensorTimestamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/customer/0.1#StoreConnectTimestamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Trait -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Trait">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ActorRelated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#TraitGroup -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#TraitGroup">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#ActorRelated"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/customer/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/customer/0.1#Trait"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Unknown -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Unknown">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#HumanGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Walking -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Walking">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Weather -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Weather">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#Context"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#SensorData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Weight -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Weight">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#GeometricRelated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Young -->
+
+    <owl:Class rdf:about="http://storeconnect/customer/0.1#Young">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/customer/0.1#TraitGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://storeconnect/customer/0.1#AisleManager -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#AisleManager">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#AcP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Ble_1 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Ble_1">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#Beacon"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#Identifier_Ble_1"/>
+        <produces rdf:resource="http://storeconnect/customer/0.1#Point_1"/>
+        <produces rdf:resource="http://storeconnect/customer/0.1#Point_2"/>
+        <produces rdf:resource="http://storeconnect/customer/0.1#Point_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Coordinates_1 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Coordinates_1">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#Coordinates"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Coordinates_2 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Coordinates_2">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#Coordinates"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Coordinates_3 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Coordinates_3">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#Coordinates"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Identifier_Ble_1 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Identifier_Ble_1">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#Identifier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#InitialStoreConnectTimestamp_1 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#InitialStoreConnectTimestamp_1">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#InitialStoreConnectTimestamp"/>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2017-10-04T10:00:00Z</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#InitialStoreConnectTimestamp_2 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#InitialStoreConnectTimestamp_2">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#InitialStoreConnectTimestamp"/>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2017-10-04T11:00:00Z</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#InitialStoreConnectTimestamp_3 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#InitialStoreConnectTimestamp_3">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#InitialStoreConnectTimestamp"/>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2017-10-04T12:00:00Z</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#John_Doe -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#John_Doe">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#Human"/>
+        <browses rdf:resource="http://storeconnect/customer/0.1#Route_1"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Doe</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Point_1 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Point_1">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#Point"/>
+        <comesFrom rdf:resource="http://storeconnect/customer/0.1#Ble_1"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#Coordinates_1"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#InitialStoreConnectTimestamp_1"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp_1"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#SensorTimestamp_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Point_2 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Point_2">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#Point"/>
+        <comesFrom rdf:resource="http://storeconnect/customer/0.1#Ble_1"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#Coordinates_2"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#InitialStoreConnectTimestamp_2"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp_2"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#SensorTimestamp_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Point_3 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Point_3">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#Point"/>
+        <comesFrom rdf:resource="http://storeconnect/customer/0.1#Ble_1"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#Coordinates_3"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#InitialStoreConnectTimestamp_3"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp_3"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#SensorTimestamp_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp_1 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp_1">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp"/>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2017-10-04T10:00:00Z</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp_2 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp_2">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp"/>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2017-10-04T11:00:00Z</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp_3 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp_3">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#RefinedStoreConnectTimestamp"/>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2017-10-04T12:00:00Z</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Route_1 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Route_1">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#Route"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#Stop_1"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#Walking_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Seller -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Seller">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#AcP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#SensorTimestamp_1 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#SensorTimestamp_1">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#SensorTimestamp"/>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-04T10:00:00Z</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#SensorTimestamp_2 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#SensorTimestamp_2">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#SensorTimestamp"/>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-04T11:00:00Z</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#SensorTimestamp_3 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#SensorTimestamp_3">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#SensorTimestamp"/>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-04T12:00:00Z</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#ShoppingBag -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#ShoppingBag">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#CEL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Stop_1 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Stop_1">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#Stop"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#Point_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Stroller -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Stroller">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#CEL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Trolley -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Trolley">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#CEL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/customer/0.1#Walking_1 -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/customer/0.1#Walking_1">
+        <rdf:type rdf:resource="http://storeconnect/customer/0.1#Walking"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#Point_1"/>
+        <isComposedOf rdf:resource="http://storeconnect/customer/0.1#Point_2"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

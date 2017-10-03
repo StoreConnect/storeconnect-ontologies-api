@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://storeconnect/sensor/0.1#"
+     xml:base="http://storeconnect/sensor/0.1"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://storeconnect/sensor/0.1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/sensor/0.1#isComposedOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Accuracy -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Accuracy">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#SensorBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Apisense -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Apisense">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Battery -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Battery">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#SensorBase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/sensor/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/sensor/0.1#Level"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Beacon -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Beacon">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Business -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Business">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Entity"/>
+        <owl:disjointWith rdf:resource="http://storeconnect/sensor/0.1#Technical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Camera -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Camera">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Emotion -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Emotion">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Recognition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Entity -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Entity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Gesture -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Gesture">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Recognition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Group -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Group">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Recognition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#High -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#High">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Level -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Level">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Technical"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://storeconnect/sensor/0.1#High"/>
+                    <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Low"/>
+                    <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Medium"/>
+                    <rdf:Description rdf:about="http://storeconnect/sensor/0.1#None"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://storeconnect/sensor/0.1#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Location -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Location">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#SensorBase"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#SensorExtra"/>
+        <owl:disjointWith rdf:resource="http://storeconnect/sensor/0.1#Recognition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Low -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Low">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Medium -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Medium">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#None -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#None">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Off -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Off">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#State"/>
+        <owl:disjointWith rdf:resource="http://storeconnect/sensor/0.1#On"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#On -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#On">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Position -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Position">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Location"/>
+        <owl:disjointWith rdf:resource="http://storeconnect/sensor/0.1#Tracking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Recognition -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Recognition">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#SensorExtra"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Sensor -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Sensor">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Business"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/sensor/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/sensor/0.1#SensorBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/sensor/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/sensor/0.1#SensorExtra"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#SensorBase -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#SensorBase">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Business"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#SensorExtra -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#SensorExtra">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Business"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/sensor/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/sensor/0.1#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/sensor/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/sensor/0.1#Recognition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#State -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#State">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Technical"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Off"/>
+                    <rdf:Description rdf:about="http://storeconnect/sensor/0.1#On"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Status -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Status">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#SensorBase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/sensor/0.1#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/sensor/0.1#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Technical -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Technical">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Timestamp -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Timestamp">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#SensorBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/sensor/0.1#Tracking -->
+
+    <owl:Class rdf:about="http://storeconnect/sensor/0.1#Tracking">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/sensor/0.1#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Accuracy"/>
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Battery"/>
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Location"/>
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Status"/>
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Timestamp"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Emotion"/>
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Gesture"/>
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Group"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#High"/>
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Low"/>
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Medium"/>
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#None"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#Sensor"/>
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#SensorBase"/>
+            <rdf:Description rdf:about="http://storeconnect/sensor/0.1#SensorExtra"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

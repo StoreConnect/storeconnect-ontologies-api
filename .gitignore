@@ -5,3 +5,5 @@ data/*
 catalog-v001.xml
 
 *.iml
+
+fuseki-data
