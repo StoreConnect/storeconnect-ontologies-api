@@ -1,0 +1,726 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://storeconnect/poc0"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://storeconnect/poc0"
+     versionIRI="http://storeconnect/poc0">
+    <Prefix name="" IRI="http://storeconnect/poc0#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.opengis.net/ont/geosparql</Import>
+    <Import>http://www.w3.org/2006/time#2016</Import>
+    <Declaration>
+        <Class IRI="#Shop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Identifier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMotionEvent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#orientation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isWithin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#speed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpatialThing"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#accuracy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RouteThing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BLE"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensorEvent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMotionState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RefinedTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StoreConnectThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShopThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSensorEventTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Route"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#browses"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MotionState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStoreConnectTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#floor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensorTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StoreConnectTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMotionSubject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensorEventTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#produces"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MotionEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IdentifiableThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInstant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasShopArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRefinedTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MotionSubject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensorThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TechnicalThing"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#storeConnectDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#identifier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSensorTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MotionThing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BusinessThing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Camera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TemporalThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShopArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPoint"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Walking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Timestamp"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#MotionState"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Walking"/>
+            <NamedIndividual IRI="#Stopping"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#BusinessThing"/>
+        <Class IRI="#StoreConnectThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IdentifiableThing"/>
+        <Class IRI="#TechnicalThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identifier"/>
+        <Class IRI="#IdentifiableThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identifier"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#identifier"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <Class IRI="#SpatialThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#isWithin"/>
+            <Class IRI="#ShopArea"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasPoint"/>
+            <Class IRI="http://www.opengis.net/ont/sf#Point"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#floor"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotionEvent"/>
+        <Class IRI="#MotionThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotionEvent"/>
+        <Class IRI="#SensorEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotionEvent"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasLocation"/>
+            <Class IRI="#Location"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotionEvent"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasMotionState"/>
+            <Class IRI="#MotionState"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotionEvent"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasMotionSubject"/>
+            <Class IRI="#MotionSubject"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotionEvent"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#orientation"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotionEvent"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#speed"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotionState"/>
+        <Class IRI="#MotionThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotionSubject"/>
+        <Class IRI="#MotionThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotionSubject"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#browses"/>
+            <Class IRI="#Route"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotionSubject"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasIdentifier"/>
+            <Class IRI="#Identifier"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotionThing"/>
+        <Class IRI="#BusinessThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RefinedTimestamp"/>
+        <Class IRI="#Timestamp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Route"/>
+        <Class IRI="#RouteThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Route"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMotionEvent"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RouteThing"/>
+        <Class IRI="#BusinessThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sensor"/>
+        <Class IRI="#SensorThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sensor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#produces"/>
+            <Class IRI="#SensorEvent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorEvent"/>
+        <Class IRI="#SensorThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorEvent"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasSensorEventTimestamp"/>
+            <Class IRI="#SensorEventTimestamp"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorEventTimestamp"/>
+        <Class IRI="#SensorThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorEventTimestamp"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasSensorTimestamp"/>
+            <Class IRI="#SensorTimestamp"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorEventTimestamp"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasStoreConnectTimestamp"/>
+            <Class IRI="#StoreConnectTimestamp"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorEventTimestamp"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasRefinedTimestamp"/>
+            <Class IRI="#RefinedTimestamp"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorThing"/>
+        <Class IRI="#BusinessThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorTimestamp"/>
+        <Class IRI="#SensorThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorTimestamp"/>
+        <Class IRI="#Timestamp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shop"/>
+        <Class IRI="#ShopThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shop"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasShopArea"/>
+            <Class IRI="#ShopArea"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShopArea"/>
+        <Class IRI="#ShopThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShopArea"/>
+        <Class IRI="http://www.opengis.net/ont/geosparql#Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShopArea"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasIdentifier"/>
+            <Class IRI="#Identifier"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShopThing"/>
+        <Class IRI="#BusinessThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpatialThing"/>
+        <Class IRI="#TechnicalThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StoreConnectTimestamp"/>
+        <Class IRI="#Timestamp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnicalThing"/>
+        <Class IRI="#StoreConnectThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TemporalThing"/>
+        <Class IRI="#TechnicalThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timestamp"/>
+        <Class IRI="#TemporalThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timestamp"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasInstant"/>
+            <Class IRI="http://www.w3.org/2006/time#Instant"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timestamp"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#accuracy"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Sensor"/>
+        <NamedIndividual IRI="#BLE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sensor"/>
+        <NamedIndividual IRI="#Camera"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MotionState"/>
+        <NamedIndividual IRI="#Stopping"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MotionState"/>
+        <NamedIndividual IRI="#Walking"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#browses"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasIdentifier"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasInstant"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasLocation"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMotionEvent"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMotionState"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMotionSubject"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPoint"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRefinedTimestamp"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSensorEventTimestamp"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSensorTimestamp"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasShopArea"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasStoreConnectTimestamp"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTimestamp"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isWithin"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#produces"/>
+        <ObjectProperty IRI="#storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#browses"/>
+        <Class IRI="#MotionSubject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIdentifier"/>
+        <Class IRI="#MotionSubject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInstant"/>
+        <Class IRI="#Timestamp"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLocation"/>
+        <Class IRI="#MotionEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMotionEvent"/>
+        <Class IRI="#Route"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMotionState"/>
+        <Class IRI="#MotionEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMotionSubject"/>
+        <Class IRI="#MotionEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPoint"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRefinedTimestamp"/>
+        <Class IRI="#StoreConnectTimestamp"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSensorEventTimestamp"/>
+        <Class IRI="#SensorEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSensorTimestamp"/>
+        <Class IRI="#SensorEventTimestamp"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasShopArea"/>
+        <Class IRI="#Shop"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStoreConnectTimestamp"/>
+        <Class IRI="#SensorEventTimestamp"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTimestamp"/>
+        <Class IRI="#SensorEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isWithin"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#produces"/>
+        <Class IRI="#Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#browses"/>
+        <Class IRI="#Route"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIdentifier"/>
+        <Class IRI="#Identifier"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInstant"/>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLocation"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMotionEvent"/>
+        <Class IRI="#MotionEvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMotionState"/>
+        <Class IRI="#MotionState"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMotionSubject"/>
+        <Class IRI="#MotionSubject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPoint"/>
+        <Class IRI="http://www.opengis.net/ont/sf#Point"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRefinedTimestamp"/>
+        <Class IRI="#RefinedTimestamp"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSensorEventTimestamp"/>
+        <Class IRI="#SensorEventTimestamp"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSensorTimestamp"/>
+        <Class IRI="#SensorTimestamp"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasShopArea"/>
+        <Class IRI="#ShopArea"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStoreConnectTimestamp"/>
+        <Class IRI="#StoreConnectTimestamp"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTimestamp"/>
+        <Class IRI="#Timestamp"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isWithin"/>
+        <Class IRI="#ShopArea"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#produces"/>
+        <Class IRI="#SensorEvent"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#accuracy"/>
+        <DataProperty IRI="#storeConnectDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#floor"/>
+        <DataProperty IRI="#storeConnectDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#identifier"/>
+        <DataProperty IRI="#storeConnectDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#orientation"/>
+        <DataProperty IRI="#storeConnectDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#speed"/>
+        <DataProperty IRI="#storeConnectDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#floor"/>
+        <Class IRI="#Location"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#orientation"/>
+        <Class IRI="#MotionEvent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#speed"/>
+        <Class IRI="#MotionEvent"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#accuracy"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#floor"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#identifier"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#orientation"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#speed"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#accuracy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Define accuracy of a measure. Value should be comprise between 0 and 1.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#floor</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Describe a Shop&apos;s floor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#identifier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifier of a Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#orientation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Orientation of the MotionEvent, in degres</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#speed</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Speed of the MotionEvent, in m/s</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
