@@ -1,9 +1,6 @@
-data/*
-.idea/*
-.DS_Store
-
-catalog-v001.xml
-
+/.idea/
 *.iml
 
-fuseki-data
+**/catalog-v001.xml
+
+**/.DS_Store
