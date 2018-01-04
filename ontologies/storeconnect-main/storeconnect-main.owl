@@ -1,0 +1,942 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://storeconnect/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://storeconnect/"
+     versionIRI="http://storeconnect/1.0/">
+    <Prefix name="" IRI="http://storeconnect/"/>
+    <Prefix name="sc" IRI="http://storeconnect#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="ssn" IRI="http://www.w3.org/ns/ssn/"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="sosa" IRI="http://www.w3.org/ns/sosa/"/>
+    <Prefix name="geosparql" IRI="http://www.opengis.net/ont/geosparql#"/>
+    <Import>http://www.opengis.net/ont/geosparql</Import>
+    <Import>http://www.w3.org/ns/ssn/</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FUI StoreConnect</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Julien Duribreux</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aurélien Bourdon</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lionel Seinturier</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Romain Rouvoy</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.pole-scs.org/projet/storeconnect</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Official ontology of the FUI StoreConnect project.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="BusinessThing"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="storeConnectDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="identifier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="similarWith"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Stopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasRefinedTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IdentifiableThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RouteThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSimilarity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="accuracy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MotionSubject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasShopArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SensorThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Store"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BleBeacon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isWithin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasMotionEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MotionEvent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="orientation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Accurate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AccurateThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="StoreArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSensorTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="produces"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Walking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MotionThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="StoreThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasStoreConnectTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="StoreConnectThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOrientation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TechnicalThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Camera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Identifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BleTracker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Orientation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Motion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isSimilarWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasMotionSubject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSpeed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasInstant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VideoTracker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SpatialThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSensorEventTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Similarity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasMotionState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="speed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Speed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="browses"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="floor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MotionState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Route"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTimestamp"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="MotionState"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="Walking"/>
+            <NamedIndividual IRI="Stopping"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="Accurate"/>
+        <Class IRI="AccurateThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AccurateThing"/>
+        <Class IRI="TechnicalThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AccurateThing"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="accuracy"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BleBeacon"/>
+        <Class IRI="SensorThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BleBeacon"/>
+        <Class abbreviatedIRI="sosa:Platform"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BleBeacon"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="sosa:hosts"/>
+            <Class IRI="BleTracker"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BleTracker"/>
+        <Class IRI="SensorThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BleTracker"/>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BusinessThing"/>
+        <Class IRI="StoreConnectThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Camera"/>
+        <Class IRI="SensorThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Camera"/>
+        <Class abbreviatedIRI="sosa:Platform"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Camera"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="sosa:hosts"/>
+            <Class IRI="VideoTracker"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IdentifiableThing"/>
+        <Class IRI="TechnicalThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Identifier"/>
+        <Class IRI="IdentifiableThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Identifier"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="identifier"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Location"/>
+        <Class IRI="Accurate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Location"/>
+        <Class IRI="SpatialThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Location"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="isWithin"/>
+            <Class IRI="StoreArea"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Location"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasPoint"/>
+            <Class IRI="http://www.opengis.net/ont/sf#Point"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Location"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="floor"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Motion"/>
+        <Class IRI="MotionThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Motion"/>
+        <Class abbreviatedIRI="sosa:ObservableProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionEvent"/>
+        <Class IRI="MotionThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionEvent"/>
+        <Class abbreviatedIRI="sosa:Result"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionEvent"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasLocation"/>
+            <Class IRI="Location"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionEvent"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasMotionState"/>
+            <Class IRI="MotionState"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionEvent"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasMotionSubject"/>
+            <Class IRI="MotionSubject"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionEvent"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasOrientation"/>
+            <Class IRI="Orientation"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionEvent"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasSpeed"/>
+            <Class IRI="Speed"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionState"/>
+        <Class IRI="MotionThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionSubject"/>
+        <Class IRI="MotionThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionSubject"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="browses"/>
+            <Class IRI="Route"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionSubject"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasIdentifier"/>
+            <Class IRI="Identifier"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionThing"/>
+        <Class IRI="BusinessThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Orientation"/>
+        <Class IRI="Accurate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Orientation"/>
+        <Class IRI="SpatialThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Orientation"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="orientation"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Route"/>
+        <Class IRI="RouteThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Route"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasMotionEvent"/>
+            <Class IRI="MotionEvent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="RouteThing"/>
+        <Class IRI="BusinessThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SensorThing"/>
+        <Class IRI="BusinessThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Similarity"/>
+        <Class IRI="Accurate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Similarity"/>
+        <Class IRI="IdentifiableThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Similarity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isSimilarWith"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SpatialThing"/>
+        <Class IRI="TechnicalThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Speed"/>
+        <Class IRI="Accurate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Speed"/>
+        <Class IRI="SpatialThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Speed"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="speed"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Store"/>
+        <Class IRI="StoreThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Store"/>
+        <Class abbreviatedIRI="sosa:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Store"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasShopArea"/>
+            <Class IRI="StoreArea"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="StoreArea"/>
+        <Class IRI="StoreThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="StoreArea"/>
+        <Class abbreviatedIRI="geosparql:Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="StoreArea"/>
+        <Class abbreviatedIRI="sosa:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="StoreArea"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasIdentifier"/>
+            <Class IRI="Identifier"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="StoreThing"/>
+        <Class IRI="BusinessThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TechnicalThing"/>
+        <Class IRI="StoreConnectThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VideoTracker"/>
+        <Class IRI="SensorThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VideoTracker"/>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="MotionState"/>
+        <NamedIndividual IRI="Stopping"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="MotionState"/>
+        <NamedIndividual IRI="Walking"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="browses"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasIdentifier"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasInstant"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasLocation"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasMotionEvent"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasMotionState"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasMotionSubject"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasOrientation"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasPoint"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasRefinedTimestamp"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSensorEventTimestamp"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSensorTimestamp"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasShopArea"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSimilarity"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSpeed"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasStoreConnectTimestamp"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasTimestamp"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isSimilarWith"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isWithin"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="produces"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="similarWith"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="browses"/>
+        <Class IRI="MotionSubject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasIdentifier"/>
+        <Class IRI="MotionSubject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasLocation"/>
+        <Class IRI="MotionEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasMotionEvent"/>
+        <Class IRI="Route"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasMotionState"/>
+        <Class IRI="MotionEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasMotionSubject"/>
+        <Class IRI="MotionEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasOrientation"/>
+        <Class IRI="MotionEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPoint"/>
+        <Class IRI="Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasShopArea"/>
+        <Class IRI="Store"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSimilarity"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSpeed"/>
+        <Class IRI="MotionEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isSimilarWith"/>
+        <Class IRI="Similarity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isWithin"/>
+        <Class IRI="Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="browses"/>
+        <Class IRI="Route"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasIdentifier"/>
+        <Class IRI="Identifier"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasInstant"/>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasLocation"/>
+        <Class IRI="Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasMotionEvent"/>
+        <Class IRI="MotionEvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasMotionState"/>
+        <Class IRI="MotionState"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasMotionSubject"/>
+        <Class IRI="MotionSubject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasOrientation"/>
+        <Class IRI="Orientation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPoint"/>
+        <Class IRI="http://www.opengis.net/ont/sf#Point"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasShopArea"/>
+        <Class IRI="StoreArea"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSimilarity"/>
+        <Class IRI="Similarity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSpeed"/>
+        <Class IRI="Speed"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isSimilarWith"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isWithin"/>
+        <Class IRI="StoreArea"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="accuracy"/>
+        <DataProperty IRI="storeConnectDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="floor"/>
+        <DataProperty IRI="storeConnectDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="identifier"/>
+        <DataProperty IRI="storeConnectDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="orientation"/>
+        <DataProperty IRI="storeConnectDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="speed"/>
+        <DataProperty IRI="storeConnectDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="accuracy"/>
+        <Class IRI="Accurate"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="floor"/>
+        <Class IRI="Location"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="orientation"/>
+        <Class IRI="Orientation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="speed"/>
+        <Class IRI="Speed"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="accuracy"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="floor"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="identifier"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="orientation"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="speed"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Accurate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Any Accurate concept can provide a given accuracy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#AccurateThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gather all StoreConnect&apos;s concepts related to the accuracy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#BLE</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A BLE sosa:Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#BusinessThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gather all StoreConnect&apos;s business related classes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Camera</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A camera sosa:Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#IdentifiableThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gather all StoreConnect&apos;s concepts used to identify something</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Identifier</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An object identifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Location</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents a location of an object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Motion</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Type of sosa:ObservableProperty that describes a motion that can be observed by a sosa:Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#MotionEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A MotionEvent is the sosa:Result of an sosa:Observation when a sosa:Sensor has observed a given Motion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#MotionState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A MotionEvent can have one of the two existing MotionState: Walking or Stopping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#MotionSubject</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The subject of the MotionEvent, i.e., the target object in motion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#MotionThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gather all StoreConnect&apos;s classes related to a motion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Orientation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents the orientation of an object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Route</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Route describes the motion route of a given MotionSubject. Is then composed of several MotionEvent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#RouteThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gather all related classes to a shopping route</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#SensorThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gather all related classes to StoreConnect&apos;s sensors, or more precisely sosa:Sensor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Similarity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Expresses the similarity between two things. Somthing is similar to somehing else when you can precise a given &quot;similariy accuracy&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#SpatialThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gather all spatial-related StoreConnect&apos;s concepts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Speed</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A speed of a moving object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Store</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents a store</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#StoreArea</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Store is cut in several StoreArea. Thus, a StoreArea is a part of a Store.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#StoreConnectThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Base class of all StoreConnect&apos;s classes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#StoreThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gather all related classes to a physical Store</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TechnicalThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Base class of all StoreConnect&apos;s technical concepts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#accuracy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Define accuracy of a measure. Value should be comprise between 0 and 1.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#floor</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Describe a Shop&apos;s floor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#identifier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifier of a Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#orientation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Orientation of the MotionEvent, in degres</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#speed</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Speed of the MotionEvent, in m/s</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

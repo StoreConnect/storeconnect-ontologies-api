@@ -1,0 +1,829 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://storeconnect/"
+     xml:base="http://storeconnect/"
+     xmlns:schema="http://schema.org/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:sc="http://storeconnect#"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sosa="http://www.w3.org/ns/sosa/">
+    <owl:Ontology rdf:about="http://storeconnect/">
+        <owl:versionIRI rdf:resource="http://storeconnect/1.0/"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
+        <terms:title xml:lang="en">FUI StoreConnect</terms:title>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:creator xml:lang="en">Julien Duribreux</terms:creator>
+        <terms:creator xml:lang="en">Aurélien Bourdon</terms:creator>
+        <terms:creator xml:lang="en">Lionel Seinturier</terms:creator>
+        <terms:creator xml:lang="en">Romain Rouvoy</terms:creator>
+        <rdfs:seeAlso xml:lang="en">https://www.pole-scs.org/projet/storeconnect</rdfs:seeAlso>
+        <terms:description xml:lang="en">Official ontology of the FUI StoreConnect project.</terms:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://storeconnect/browses -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/browses">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/MotionSubject"/>
+        <rdfs:range rdf:resource="http://storeconnect/Route"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/MotionSubject"/>
+        <rdfs:range rdf:resource="http://storeconnect/Identifier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasInstant -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasInstant">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasLocation">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/MotionEvent"/>
+        <rdfs:range rdf:resource="http://storeconnect/Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasMotionEvent -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasMotionEvent">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/Route"/>
+        <rdfs:range rdf:resource="http://storeconnect/MotionEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasMotionState -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasMotionState">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/MotionEvent"/>
+        <rdfs:range rdf:resource="http://storeconnect/MotionState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasMotionSubject -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasMotionSubject">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/MotionEvent"/>
+        <rdfs:range rdf:resource="http://storeconnect/MotionSubject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasOrientation -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasOrientation">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/MotionEvent"/>
+        <rdfs:range rdf:resource="http://storeconnect/Orientation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasPoint -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasPoint">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/Location"/>
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasRefinedTimestamp -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasRefinedTimestamp">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasSensorEventTimestamp -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasSensorEventTimestamp">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasSensorTimestamp -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasSensorTimestamp">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasShopArea -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasShopArea">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/Store"/>
+        <rdfs:range rdf:resource="http://storeconnect/StoreArea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasSimilarity -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasSimilarity">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://storeconnect/Similarity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasSpeed -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasSpeed">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/MotionEvent"/>
+        <rdfs:range rdf:resource="http://storeconnect/Speed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasStoreConnectTimestamp -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasStoreConnectTimestamp">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/hasTimestamp -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasTimestamp">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/isSimilarWith -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/isSimilarWith">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/Similarity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/isWithin -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/isWithin">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/Location"/>
+        <rdfs:range rdf:resource="http://storeconnect/StoreArea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/produces -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/produces">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/similarWith -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/similarWith">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://storeconnect/storeConnectObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/storeConnectObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://storeconnect/accuracy -->
+
+    <owl:DatatypeProperty rdf:about="http://storeconnect/accuracy">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectDataProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/Accurate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://storeconnect/floor -->
+
+    <owl:DatatypeProperty rdf:about="http://storeconnect/floor">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectDataProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://storeconnect/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://storeconnect/identifier">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://storeconnect/orientation -->
+
+    <owl:DatatypeProperty rdf:about="http://storeconnect/orientation">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectDataProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/Orientation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://storeconnect/speed -->
+
+    <owl:DatatypeProperty rdf:about="http://storeconnect/speed">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectDataProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/Speed"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://storeconnect/storeConnectDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://storeconnect/storeConnectDataProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://storeconnect/Accurate -->
+
+    <owl:Class rdf:about="http://storeconnect/Accurate">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/AccurateThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/AccurateThing -->
+
+    <owl:Class rdf:about="http://storeconnect/AccurateThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/TechnicalThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/accuracy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/BleBeacon -->
+
+    <owl:Class rdf:about="http://storeconnect/BleBeacon">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/SensorThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hosts"/>
+                <owl:allValuesFrom rdf:resource="http://storeconnect/BleTracker"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/BleTracker -->
+
+    <owl:Class rdf:about="http://storeconnect/BleTracker">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/SensorThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/BusinessThing -->
+
+    <owl:Class rdf:about="http://storeconnect/BusinessThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/StoreConnectThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/Camera -->
+
+    <owl:Class rdf:about="http://storeconnect/Camera">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/SensorThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hosts"/>
+                <owl:allValuesFrom rdf:resource="http://storeconnect/VideoTracker"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/IdentifiableThing -->
+
+    <owl:Class rdf:about="http://storeconnect/IdentifiableThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/TechnicalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/Identifier -->
+
+    <owl:Class rdf:about="http://storeconnect/Identifier">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/IdentifiableThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/identifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/Location -->
+
+    <owl:Class rdf:about="http://storeconnect/Location">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/Accurate"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/SpatialThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/isWithin"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/StoreArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/hasPoint"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/floor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/Motion -->
+
+    <owl:Class rdf:about="http://storeconnect/Motion">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/MotionThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/MotionEvent -->
+
+    <owl:Class rdf:about="http://storeconnect/MotionEvent">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/MotionThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/hasLocation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/hasMotionState"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/MotionState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/hasMotionSubject"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/MotionSubject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/hasOrientation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/Orientation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/hasSpeed"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/Speed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/MotionState -->
+
+    <owl:Class rdf:about="http://storeconnect/MotionState">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://storeconnect/Stopping"/>
+                    <rdf:Description rdf:about="http://storeconnect/Walking"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/MotionThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/MotionSubject -->
+
+    <owl:Class rdf:about="http://storeconnect/MotionSubject">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/MotionThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/browses"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/Route"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/hasIdentifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/MotionThing -->
+
+    <owl:Class rdf:about="http://storeconnect/MotionThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/BusinessThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/Orientation -->
+
+    <owl:Class rdf:about="http://storeconnect/Orientation">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/Accurate"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/SpatialThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/orientation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/Route -->
+
+    <owl:Class rdf:about="http://storeconnect/Route">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/RouteThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/hasMotionEvent"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/MotionEvent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/RouteThing -->
+
+    <owl:Class rdf:about="http://storeconnect/RouteThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/BusinessThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/SensorThing -->
+
+    <owl:Class rdf:about="http://storeconnect/SensorThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/BusinessThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/Similarity -->
+
+    <owl:Class rdf:about="http://storeconnect/Similarity">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/Accurate"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/IdentifiableThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/isSimilarWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/SpatialThing -->
+
+    <owl:Class rdf:about="http://storeconnect/SpatialThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/TechnicalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/Speed -->
+
+    <owl:Class rdf:about="http://storeconnect/Speed">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/Accurate"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/SpatialThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/speed"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/Store -->
+
+    <owl:Class rdf:about="http://storeconnect/Store">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/StoreThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/hasShopArea"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/StoreArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/StoreArea -->
+
+    <owl:Class rdf:about="http://storeconnect/StoreArea">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/StoreThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/hasIdentifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://storeconnect/Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/StoreConnectThing -->
+
+    <owl:Class rdf:about="http://storeconnect/StoreConnectThing"/>
+    
+
+
+    <!-- http://storeconnect/StoreThing -->
+
+    <owl:Class rdf:about="http://storeconnect/StoreThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/BusinessThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/TechnicalThing -->
+
+    <owl:Class rdf:about="http://storeconnect/TechnicalThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/StoreConnectThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/VideoTracker -->
+
+    <owl:Class rdf:about="http://storeconnect/VideoTracker">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/SensorThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://storeconnect/Stopping -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/Stopping">
+        <rdf:type rdf:resource="http://storeconnect/MotionState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://storeconnect/Walking -->
+
+    <owl:NamedIndividual rdf:about="http://storeconnect/Walking">
+        <rdf:type rdf:resource="http://storeconnect/MotionState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://storeconnect/#Accurate">
+        <terms:description xml:lang="en">Any Accurate concept can provide a given accuracy.</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#AccurateThing">
+        <terms:description xml:lang="en">Gather all StoreConnect&apos;s concepts related to the accuracy</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#BLE">
+        <terms:description xml:lang="en">A BLE sosa:Sensor</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#BusinessThing">
+        <terms:description xml:lang="en">Gather all StoreConnect&apos;s business related classes</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#Camera">
+        <terms:description xml:lang="en">A camera sosa:Sensor</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#IdentifiableThing">
+        <terms:description xml:lang="en">Gather all StoreConnect&apos;s concepts used to identify something</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#Identifier">
+        <terms:description xml:lang="en">An object identifier</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#Location">
+        <terms:description xml:lang="en">Represents a location of an object</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#Motion">
+        <terms:description xml:lang="en">Type of sosa:ObservableProperty that describes a motion that can be observed by a sosa:Sensor</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#MotionEvent">
+        <terms:description xml:lang="en">A MotionEvent is the sosa:Result of an sosa:Observation when a sosa:Sensor has observed a given Motion</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#MotionState">
+        <terms:description xml:lang="en">A MotionEvent can have one of the two existing MotionState: Walking or Stopping</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#MotionSubject">
+        <terms:description xml:lang="en">The subject of the MotionEvent, i.e., the target object in motion</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#MotionThing">
+        <terms:description xml:lang="en">Gather all StoreConnect&apos;s classes related to a motion</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#Orientation">
+        <terms:description xml:lang="en">Represents the orientation of an object</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#Route">
+        <terms:description xml:lang="en">A Route describes the motion route of a given MotionSubject. Is then composed of several MotionEvent.</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#RouteThing">
+        <terms:description xml:lang="en">Gather all related classes to a shopping route</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#SensorThing">
+        <terms:description xml:lang="en">Gather all related classes to StoreConnect&apos;s sensors, or more precisely sosa:Sensor.</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#Similarity">
+        <terms:description xml:lang="en">Expresses the similarity between two things. Somthing is similar to somehing else when you can precise a given &quot;similariy accuracy&quot;</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#SpatialThing">
+        <terms:description xml:lang="en">Gather all spatial-related StoreConnect&apos;s concepts</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#Speed">
+        <terms:description xml:lang="en">A speed of a moving object</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#Store">
+        <terms:description xml:lang="en">Represents a store</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#StoreArea">
+        <terms:description xml:lang="en">A Store is cut in several StoreArea. Thus, a StoreArea is a part of a Store.</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#StoreConnectThing">
+        <terms:description xml:lang="en">Base class of all StoreConnect&apos;s classes</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#StoreThing">
+        <terms:description xml:lang="en">Gather all related classes to a physical Store</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#TechnicalThing">
+        <rdfs:comment xml:lang="en">Base class of all StoreConnect&apos;s technical concepts</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#accuracy">
+        <rdfs:comment>Define accuracy of a measure. Value should be comprise between 0 and 1.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#floor">
+        <rdfs:comment>Describe a Shop&apos;s floor</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#identifier">
+        <rdfs:comment>Identifier of a Thing</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#orientation">
+        <rdfs:comment>Orientation of the MotionEvent, in degres</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://storeconnect/#speed">
+        <rdfs:comment>Speed of the MotionEvent, in m/s</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
