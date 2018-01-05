@@ -34,7 +34,9 @@ _Note: The `-d` option that starts composition's containers in background mode. 
 
 #### Visualize a StoreConnect's ontology
 
-To visualize a StoreConnect's ontology, please follow the steps below:
+To visualize a StoreConnect's ontology, please import it and customize its visualization as described below.
+
+##### Import ontology
 
 1. Access to the VisualDataWeb's VOWL interface by browsing to `<docker host>:8080/webvowl`
 2. Get the StoreConnect's ontology IRI by using the URL provided by the [raw Github version](https://stackoverflow.com/questions/4604663/download-single-files-from-github) of your ontology
@@ -43,6 +45,8 @@ To visualize a StoreConnect's ontology, please follow the steps below:
 5. Click on the `Visualize` button
 
 Then ontology is loading and finally visualized into the web interface.
+
+##### Customize visualization
 
 By default, some filters are applied so some elements are hidden. To fully visualize ontology, please apply the next configuration by playing with the WebVOWL menu:
 
