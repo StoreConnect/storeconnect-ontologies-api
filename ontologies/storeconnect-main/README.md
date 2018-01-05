@@ -36,11 +36,11 @@ Based on this architecture, the StoreConnect's ontology can be depicted thanks t
 
 ### Visualization
 
-There are three ways to visualize this ontology:
+There are four ways to visualize this ontology:
 
-- By using the [static HTML generated view](???) (TODO: generate link)
-- By using the [StoreConnect's visualization server](../tools/visualization-server)
-- By using the [Protégé](https://protege.stanford.edu/) tool and importing the associated [owl file](./storeconnect-main.owl)
+- By using its [dynamic representation](http://apiontologie.westeurope.cloudapp.azure.com:8081/webvowl/#opts=[doc=0;mode_multiColor=true;]#iri=https://raw.githubusercontent.com/StoreConnect/storeconnect-ontology/develop/ontologies/storeconnect-main/storeconnect-main.owl) (use the [StoreConnect's dynamic visualization server](../../tools/dynamic-visualization-server))
+- By using its [static representation](http://apiontologie.westeurope.cloudapp.azure.com:8080) (use the [StoreConnect's static visualization server](../../tools/static-visualization-server))
+- By using the [Protégé](https://protege.stanford.edu/) tool and importing its associated [owl file](./storeconnect-main.owl)
 
 #### Special note about the Protege's Ontograf plugin DOT generation
 

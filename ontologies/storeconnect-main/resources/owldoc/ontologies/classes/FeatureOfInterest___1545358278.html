@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Ontology Browser</title>
+<meta http-equiv='content-type' content='text/html;charset=UTF-8'>
+<link rel='stylesheet' href='../css/default.css' type='text/css' />
+</head>
+
+<body>
+
+<div id='tabs'>
+<a href='../ontologies/index.html' class='' >Ontologies</a>
+<a href='index.html' class='' >Classes</a>
+<a href='../objectproperties/index.html' class='' >Object Properties</a>
+<a href='../dataproperties/index.html' class='' >Data Properties</a>
+<a href='../annotationproperties/index.html' class='' >Annotation Properties</a>
+<a href='../individuals/index.html' class='' >Individuals</a>
+<a href='../datatypes/index.html' class='' >Datatypes</a>
+<a href='../cloud/' class='' >Clouds</a>
+</div> <!-- tabs -->
+
+
+<div class='summary'><h2>Class: 'Feature Of Interest'</h2>
+
+<div id='annotations_(5)'>
+<h4>Annotations (5)</h4>
+<div class='codebox'>
+<ul>
+<li class="asserted"><a href="../annotationproperties/comment___1501100887.html" class='Annotation Property' title="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a> <span class='literal'>"The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."</span> <span style='color: black;'>@en</span></li>
+<li class="asserted"><a href="../annotationproperties/isDefinedBy___449337134.html" class='Annotation Property' title="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">rdfs:isDefinedBy</a> http://www.w3.org/ns/sosa/ 
+<a href='http://www.w3.org/ns/sosa/' class='urlOption' target='_blank' ><img src="../images/external.png" title="Attempt to open link in another window" /></a></li>
+<li class="asserted"><a href="../annotationproperties/label___653429740.html" class='Annotation Property' title="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a> <span class='literal'>"Feature Of Interest"</span> <span style='color: black;'>@en</span></li>
+<li class="asserted"><a href="../annotationproperties/definition___428285432.html" class='Annotation Property' title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <span class='literal'>"The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."</span> <span style='color: black;'>@en</span></li>
+<li class="asserted"><a href="../annotationproperties/example___119732751.html" class='Annotation Property' title="http://www.w3.org/2004/02/skos/core#example">example</a> <span class='literal'>"When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."</span> <span style='color: black;'>@en</span></li>
+</ul>
+</div>
+</div><!-- annotations (5) -->
+
+
+<div id='superclasses_(3)'>
+<h4>Superclasses (3)</h4>
+<div class='codebox'>
+<ul>
+<li class="asserted"><a href="../objectproperties/hasSample___271726355.html" class='Object Property' title="http://www.w3.org/ns/sosa/hasSample">'has&nbsp;sample'</a> <span class='only'>only</span> <a href="Sample___-1264156679.html" class='Class' title="http://www.w3.org/ns/sosa/Sample">Sample</a></li>
+<li class="asserted"><a href="../objectproperties/hasProperty___1206700742.html" class='Object Property' title="http://www.w3.org/ns/ssn/hasProperty">'has&nbsp;property'</a> <span class='only'>only</span> <a href="Property___-1603112404.html" class='Class' title="http://www.w3.org/ns/ssn/Property">Property</a></li>
+<li class="asserted"><a href="../objectproperties/hasProperty___1206700742.html" class='Object Property' title="http://www.w3.org/ns/ssn/hasProperty">'has&nbsp;property'</a> <span class='min'>min</span> 1 <a href="Thing___-200689702.html" class='Class' title="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a></li>
+</ul>
+</div>
+</div><!-- superclasses (3) -->
+
+
+<div id='usage_(5)'>
+<h4>Usage (5)</h4>
+<div class='codebox'>
+<ul>
+<li class="asserted"><a href="Actuation___-1200243519.html" class='Class' title="http://www.w3.org/ns/sosa/Actuation">Actuation</a> <span class='keyword'>&sube;</span> <a href="../objectproperties/hasFeatureOfInterest___-1326251924.html" class='Object Property' title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">'has&nbsp;feature&nbsp;of&nbsp;interest'</a> <span class='only'>only</span> <span class='Class active-entity'>'Feature&nbsp;Of&nbsp;Interest'</span></li>
+<li class="asserted"><a href="Observation___-1943101893.html" class='Class' title="http://www.w3.org/ns/sosa/Observation">Observation</a> <span class='keyword'>&sube;</span> <a href="../objectproperties/hasFeatureOfInterest___-1326251924.html" class='Object Property' title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">'has&nbsp;feature&nbsp;of&nbsp;interest'</a> <span class='only'>only</span> <span class='Class active-entity'>'Feature&nbsp;Of&nbsp;Interest'</span></li>
+<li class="asserted"><a href="Sample___-1264156679.html" class='Class' title="http://www.w3.org/ns/sosa/Sample">Sample</a> <span class='keyword'>&sube;</span> <a href="../objectproperties/isSampleOf___1743946394.html" class='Object Property' title="http://www.w3.org/ns/sosa/isSampleOf">'is&nbsp;sample&nbsp;of'</a> <span class='only'>only</span> <span class='Class active-entity'>'Feature&nbsp;Of&nbsp;Interest'</span></li>
+<li class="asserted"><a href="Sampling___-1693101514.html" class='Class' title="http://www.w3.org/ns/sosa/Sampling">Sampling</a> <span class='keyword'>&sube;</span> <a href="../objectproperties/hasFeatureOfInterest___-1326251924.html" class='Object Property' title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">'has&nbsp;feature&nbsp;of&nbsp;interest'</a> <span class='only'>only</span> <span class='Class active-entity'>'Feature&nbsp;Of&nbsp;Interest'</span></li>
+<li class="asserted"><a href="Property___-1603112404.html" class='Class' title="http://www.w3.org/ns/ssn/Property">Property</a> <span class='keyword'>&sube;</span> <a href="../objectproperties/isPropertyOf___570618765.html" class='Object Property' title="http://www.w3.org/ns/ssn/isPropertyOf">'is&nbsp;property&nbsp;of'</a> <span class='only'>only</span> <span class='Class active-entity'>'Feature&nbsp;Of&nbsp;Interest'</span></li>
+</ul>
+</div>
+</div><!-- usage (5) -->
+
+</div> <!-- summary -->
+<p class='footer'>
+<a href='http://code.google.com/p/ontology-browser/' target='_blank'>OWL HTML inside</a>
+</p>
+</body>
+</html>

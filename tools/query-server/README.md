@@ -20,7 +20,7 @@ File/Directory                                  | Description
 
 ### ... access to the official StoreConnect's ontology query server instance?
 
-The official StoreConnect's ontology query server instance can be reached [here](???) (TODO: generate link).
+The official StoreConnect's ontology query server instance can be reached [here](http://apiontologie.westeurope.cloudapp.azure.com:8890/sparql).
 
 ### ... install its own StoreConnect's ontology query server?
 
@@ -55,7 +55,7 @@ By default, composition is using a [Docker volume](https://docs.docker.com/engin
 
 #### Running services / ports
 
-When composition is running, the `virtuoso` service is up with the following associated ports:
+When composition is running, the `storeconnect-virtuoso` service is up with the following associated ports:
 
 Port    | Description
 ------- | --------------------------------------------------
