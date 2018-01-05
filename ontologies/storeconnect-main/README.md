@@ -67,7 +67,7 @@ Where `<path/to/the/original/storeconnect.dot>` is the path to the original [Pro
 
 ### Querying
 
-More information about ontology querying can be found in the [tools/query-server](../tools/query-server) part.
+More information about ontology querying can be found in the [tools/query-server](../../tools/query-server) part.
 
 ### Examples of use
 
