@@ -17,7 +17,6 @@ Statically visualization is based on a static HTML representation of the ontolog
 File/Directory                                  | Description
 ----------------------------------------------- | -----------
 [`docker-compose.yml`](./docker-compose.yml)    | The Docker composition file of the StoreConnect's ontology server
-[`owldoc`](./owldoc)                            | Should contain HTML file generation of the [Protégé](https://protege.stanford.edu/)'s [OwlDoc plugin](https://protegewiki.stanford.edu/wiki/OWLDoc)
 
 ## How to...
 
@@ -33,7 +32,7 @@ To generate the static HTML representation of an ontology, then:
 
 1. Load your ontology into [Protégé](https://protege.stanford.edu/)
 2. Export the HTML representation of your ontology by using the [OwlDoc](https://protegewiki.stanford.edu/wiki/OWLDoc) located at `Tools` -> `Export OWLDoc`
-3. Save the export into the local [`owldoc`](./owldoc) folder
+3. Create a link, named `owldoc`, that links to your exported folder
 
 ### ... visualize the static representation of an ontology
 
