@@ -6,7 +6,7 @@ In the rest of this document, the main FUI StoreConnect's ontology will be simpl
 
 ## Authors
 
-Aurélien Bourdon, Julien Duribreux, [Romain Rouvoy](http://romain.rouvoy.fr/), [Lionel Seinturier](http://www.lifl.fr/~seinturi/).
+Aurélien Bourdon, Julien Duribreux, [Romain Rouvoy](http://romain.rouvoy.fr), [Lionel Seinturier](http://www.lifl.fr/~seinturi).
 
 ## Version
 
@@ -16,7 +16,7 @@ Aurélien Bourdon, Julien Duribreux, [Romain Rouvoy](http://romain.rouvoy.fr/), 
 
 ### Imported concepts
 
-The StoreConnect's ontology is based on several standard ontologies. A good understanding of these ontologies is strongly recommended to correctly be able to use the StoreConnect one.
+The StoreConnect's ontology is based on several standard ontologies. A good understanding of these ontologies is strongly recommended to correctly understand the StoreConnect's one.
 
 - The [OGC & W3C Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn), by focusing on the [observation perspective](https://www.w3.org/TR/vocab-ssn/#fig-overview-of-the-ssn-classes-and-properties-observation-perspective)
 - The [OGC GeoSPARQL Ontology](http://www.opengeospatial.org/standards/geosparql)
@@ -24,11 +24,11 @@ The StoreConnect's ontology is based on several standard ontologies. A good unde
 
 ### Specific concepts
 
-As described in the previous section, the StoreConnect's ontology is based on the [OGC & W3C Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn). That's it, any StoreConnect's Sensor is a (or inherits from) [sosa:Sensor](https://www.w3.org/TR/vocab-ssn/#SOSASensor) (or more generally a [sosa:Platform](https://www.w3.org/TR/vocab-ssn/#SOSAPlatform) that hosts [sosa:Sensor](https://www.w3.org/TR/vocab-ssn/#SOSASensor)s) and StoreConnect's Sensor architecture is based on the specific [SSN/SOSA observation perspective](https://www.w3.org/TR/vocab-ssn/#fig-overview-of-the-ssn-classes-and-properties-observation-perspective):
+As described in the previous section, the StoreConnect's ontology is based on the [OGC & W3C Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn). That's it, any StoreConnect's Sensor is a (or inherits from) [sosa:Sensor](https://www.w3.org/TR/vocab-ssn/#SOSASensor) (or more generally a [sosa:Platform](https://www.w3.org/TR/vocab-ssn/#SOSAPlatform) that hosts [sosa:Sensor](https://www.w3.org/TR/vocab-ssn/#SOSASensor)s) and StoreConnect's Sensor architecture is based on the specific [SSN/SOSA observation perspective](https://www.w3.org/TR/vocab-ssn/#fig-overview-of-the-ssn-classes-and-properties-observation-perspective). Details of this perspective is depicted by the following picture.
 
 ![Overview of the SSN classes and properties following the observation perspective](./resources/ssn-observation-structure.png)
 
-Based on this architecture, the StoreConnect's ontology can be depicted thanks the following picture:
+Based on this architecture, the StoreConnect's ontology can be represented as follows.
 
 ![StoreConnect architecture](./resources/storeconnect-main.png)
 
@@ -42,10 +42,11 @@ There are four ways to visualize this ontology:
     - _Note: beware to correctly configure your visualization as described in the [visualization configuration part](../../tools/dynamic-visualization-server/README.md#customize-visualization) of the [StoreConnect's dynamic visualization server](../../tools/dynamic-visualization-server)_
 - By using its [static representation](http://apiontologie.westeurope.cloudapp.azure.com:8080) (use the [StoreConnect's static visualization server](../../tools/static-visualization-server))
 - By using the [Protégé](https://protege.stanford.edu/) tool and importing its associated [owl file](./storeconnect-main.owl)
+- By using some Protégé's plugins, as the [Protege's OntoGraf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf) and generate the associated image as defined in the [previous section](#specific-concepts)
 
 #### Special note about the Protege's Ontograf plugin DOT generation
 
-When using [Protégé](https://protege.stanford.edu/), is also possible to visualize ontology as a graph, by using the [Protege's OntoGraf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf).
+As explained above, when using [Protégé](https://protege.stanford.edu/), it is also possible to visualize ontology as a graph, by using the [Protege's OntoGraf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf).
 This plugin can also generate a [DOT](https://graphviz.gitlab.io/_pages/doc/info/lang.html) file of the ontology that can be further rendered as an image (see [StoreConnect's ontology picture](#specific-concepts)).
 However, this generation is very limited and cannot be configured.
 
@@ -72,14 +73,14 @@ More information about ontology querying can be found in the [tools/query-server
 
 ### Examples of use
 
-This section shows some examples that use the StoreConnect's ontology
+This section shows some examples to use the StoreConnect's ontology
 
 #### Example #1: Describe a simple observation made a camera sensor inside a store
 
 The following example describes how to:
 
-- Declare a new camera sensor
-- Register an observation of this new camera sensor, that focuses on a motion of a given store
+- Declare a new camera sensor (more precisely, a camera `sosa:Platform` that hosts a video tracker `sosa:Sensor`)
+- Register an observation of this camera sensor, that focuses on a motion of an object in a given store
 
 ```ttl
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -170,7 +171,7 @@ WHERE {
 }
 ```
 
-And could provide the following result:
+And could then provide the following result:
 
 ![SPARQL result](resources/sparql-example2-result.png)
 
@@ -178,7 +179,7 @@ And could provide the following result:
 
 To express that two objects are similar, you can use the `sc:Similarity` concept.
 
-For instance, make two motion subject (`sc:MotionSubject`) similar could be done as follow:
+For instance, the following statements define that two motion subjects (`sc:MotionSubject`) are similar:
 
  ```ttl
  @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -200,7 +201,7 @@ For instance, make two motion subject (`sc:MotionSubject`) similar could be done
  
 #### Example #4: Retrieve any similar object to a given one
 
-Now, based on the previous example, lets say we would have all similar motion subject to our `<MotionSubject/1234>` one. This could be expressed as the following [SPARQL](https://www.w3.org/TR/sparql11-query/) query:
+Now, based on the previous example, lets say we want to have all similar motion subjects to our `<MotionSubject/1234>` one. This could be expressed as the following [SPARQL](https://www.w3.org/TR/sparql11-query/) query:
 
 ```sparql
 BASE <http://example.org/data/>
@@ -217,6 +218,6 @@ WHERE {
 
 ```
 
-And provide the following result:
+And then provide the following result:
 
 ![SPARQL result](resources/sparql-example4-result.png)

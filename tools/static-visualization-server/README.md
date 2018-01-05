@@ -16,43 +16,47 @@ Statically visualization is based on a static HTML representation of the ontolog
 
 File/Directory                                  | Description
 ----------------------------------------------- | -----------
-[`docker-compose.yml`](./docker-compose.yml)    | The Docker composition file of the StoreConnect's ontology server
+[`docker-compose.yml`](./docker-compose.yml)    | The Docker composition file of the StoreConnect's static ontology visualization server
 
 ## How to...
 
-### ... access to the official StoreConnect's ontology visualization server instance?
+### ... access to the official StoreConnect's static ontology visualization server instance?
 
 The official StoreConnect's ontology visualization server instance can be reached [here](http://apiontologie.westeurope.cloudapp.azure.com:8080). See [associated ontologies](../../ontologies) for more details
 
 ### ... generate the static HTML representation of an ontology 
 
-Static HTML representation of an ontology is based on the [Protégé](https://protege.stanford.edu/)'s [OwlDoc plugin](https://protegewiki.stanford.edu/wiki/OWLDoc).
+Static HTML representation of an ontology can be produced by the [Protégé](https://protege.stanford.edu/)'s [OwlDoc plugin](https://protegewiki.stanford.edu/wiki/OWLDoc).
 
 To generate the static HTML representation of an ontology, then:
 
 1. Load your ontology into [Protégé](https://protege.stanford.edu/)
-2. Export the HTML representation of your ontology by using the [OwlDoc](https://protegewiki.stanford.edu/wiki/OWLDoc) located at `Tools` -> `Export OWLDoc`
-3. Create a link, named `owldoc`, that links to your exported folder
+2. Export the HTML representation of your ontology by using the [OwlDoc](https://protegewiki.stanford.edu/wiki/OWLDoc) located at `Tools` -> `Export OWLDoc...`
+3. Create a link, named `owldoc`, that links to the directory containing the exported HTML representation
 
 ### ... visualize the static representation of an ontology
 
-When static HTML representation has been correctly generated (see previous section), then:
+When static HTML representation has been correctly generated (see [previous section](#-generate-the-static-html-representation-of-an-ontology)), then:
 
 1. Execute from the console
 
+```
     docker-compose up -d
+```
 
-_Note: The `-d` option that starts composition's containers in background mode. Use the `--help` option for more details_
+_Note: The `-d` option starts composition's containers in background mode. Use the `--help` option for more details_
 
 2. Browse to 
 
+```
     <docker_host>:8080
+```
     
-Where `<docker_host>` is your Docker host (`localhost` by default if using a native Docker installation)
+Where `<docker_host>` is the associated Docker host (`localhost` by default if using a native Docker installation)
 
-#### Running services / ports
+#### Exposed ports
 
-When composition is running, the `storeconnect-owldoc` service is up with the following associated ports:
+When composition is running, the `storeconnect-owldoc` service is up and exposed the following ports:
 
 Port    | Description
 ------- | -----------------------------------------------------------------

@@ -1,6 +1,6 @@
 # FUI StoreConnect's ontology query server
 
-This directory contains definition about the FUI StoreConnect's ontology query server.
+This directory contains definition about the [FUI StoreConnect](https://www.pole-scs.org/projet/storeconnect)'s ontology query server.
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ This directory contains definition about the FUI StoreConnect's ontology query s
 
 File/Directory                                  | Description
 ----------------------------------------------- | -----------
-[`docker-compose.yml`](./docker-compose.yml)    | The Docker composition file of the StoreConnect's ontology server
+[`docker-compose.yml`](./docker-compose.yml)    | The Docker composition file of the StoreConnect's ontology query server
 [`./conf/`](./conf)                             | Associated configuration file to the Docker composition
 
 ## How to...
@@ -30,19 +30,19 @@ Simply execute from the console:
 
     docker-compose up -d
 
-_Note: The `-d` option that starts composition's containers in background mode. Use the `--help` option for more details_
+_Note: The `-d` option starts composition's containers in background mode. Use the `--help` option for more details_
 
 #### Server configuration
 
-When composition is running, associated `virtuoso` service reads configuration from the [./conf/virtuoso.env](./conf/virtuoso.env) configuration file.
+When composition is running, associated `storeconnect-virtuoso` service reads configuration from the [./conf/virtuoso.env](./conf/virtuoso.env) configuration file.
 
-By default, configuration fits for a standard machine (e.g., common RAM capacity). Refer to [this](https://github.com/tenforce/docker-virtuoso#ini-configuration) and [this](http://docs.openlinksw.com/virtuoso/dbadm/#virtini) if you want to customize your instance with specific configuration.
+By default, configuration fits for a standard machine (e.g., common RAM capacity). Refer to [this](https://github.com/tenforce/docker-virtuoso#ini-configuration) and [this](http://docs.openlinksw.com/virtuoso/dbadm/#virtini) if you want to customize your instance with a more appropriate configuration.
 
 #### Import a StoreConnect's ontology
 
-When StoreConnect's ontology query server is ran for the first time, then server is empty and no ontology is loaded. To load an ontology:
+When StoreConnect's ontology query server is ran for the first time, the server is empty and no ontology is loaded. To load an ontology:
 
-1. Access to the StoreConnect server's web form by browsing to `<docker host>:8090`
+1. Access to the StoreConnect server's web form by browsing to `<docker host>:8090`, where `<docker host>` is the associated Docker host (`localhost` by default if using a native Docker installation)
 2. Access to the `Conductor` menu 
 3. Type the username/password (`dba`/`dba` by default)
 4. Access to the `LinkedData` tab
@@ -53,9 +53,9 @@ When StoreConnect's ontology query server is ran for the first time, then server
 
 By default, composition is using a [Docker volume](https://docs.docker.com/engine/admin/volumes/volumes/) to persist data. Volume is automatically created at the first execution and be mounted to the relative [./data/](./data) directory. 
 
-#### Running services / ports
+#### Exposed ports
 
-When composition is running, the `storeconnect-virtuoso` service is up with the following associated ports:
+When composition is running, the `storeconnect-virtuoso` service is up and exposes the following ports:
 
 Port    | Description
 ------- | --------------------------------------------------

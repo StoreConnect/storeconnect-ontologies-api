@@ -1,6 +1,6 @@
 # Protege's Ontgraf plugin DOT generation enhancer 
 
-Enhance [DOT](https://graphviz.gitlab.io/_pages/doc/info/lang.html) graph produced by the [Protege's OntoGraf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf)
+Enhance [DOT](https://graphviz.gitlab.io/_pages/doc/info/lang.html) graph produced by the [Protege's OntoGraf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf).
 
 ## Prerequisites
 
@@ -10,11 +10,11 @@ Enhance [DOT](https://graphviz.gitlab.io/_pages/doc/info/lang.html) graph produc
 
 ## Motivation
 
-By default, the [Protege's OntoGraf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf) can generate a DOT file based on the graph is currently displayed. But there is no way to customize its generation (color, distinguish internal and external concepts, ...). That's the aim of the [enhance-dot-ontograf.sh](./enhance-dot-ontograf.sh) tool: to have a way to customize DOT generation by the [Protege's OntoGraf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf).
+Thanks to the [Protege's OntoGraf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf) a [DOT](https://graphviz.gitlab.io/_pages/doc/info/lang.html) representation of the ontology can be made. But there is no way to customize this generation (color, distinguish internal and external concepts, ...). That's the aim of the [enhance-dot-ontograf.sh](./enhance-dot-ontograf.sh) tool.
 
 ## Example of use
 
-The following example shows how to generate an enhanced DOT file based on an original one, by defining some external concept and no overriding the existing original DOT file:
+The following example shows how to generate an enhanced DOT file based on an original one produced by the [Protege's OntoGraf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf), by defining some external concepts and adding other options
 
     ./enhance-dot-ontograf.sh 
         -o enhanced-ontology.dot
@@ -26,3 +26,9 @@ The following example shows how to generate an enhanced DOT file based on an ori
 Enhanced DOT file can be rendered as a picture image as any DOT file by using the [dot](https://linux.die.net/man/1/dot) command line:
 
     dot -Tpng -oenhanced-ontology.png enhanced-ontology.dot
+
+## More information
+
+More information can be fetched by using the `-h` or `--help` option:
+
+    ./enhance-dot-ontograf.sh --help
