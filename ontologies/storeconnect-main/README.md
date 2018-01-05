@@ -1,4 +1,4 @@
-# Main StoreConnect ontology
+# FUI StoreConnect's main ontology
 
 This ontology is the main ontology used to describe the [FUI StoreConnect project](https://www.pole-scs.org/projet/storeconnect).
 
