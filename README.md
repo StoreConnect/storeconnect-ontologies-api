@@ -1,19 +1,19 @@
 # FUI StoreConnect's ontologies
 
-This repository contains ontologies and relative tools associated to the FUI Project [StoreConnect](https://www.pole-scs.org/projet/storeconnect).
+This repository contains the ontologies and the tools associated to the FUI [StoreConnect](https://www.pole-scs.org/projet/storeconnect) Project.
 
 ## Authors
 
-Aurélien Bourdon, Julien Duribreux, [Romain Rouvoy](http://romain.rouvoy.fr/), [Lionel Seinturier](http://www.lifl.fr/~seinturi/).
+Aurélien Bourdon, Julien Duribreux, [Romain Rouvoy](http://romain.rouvoy.fr), [Lionel Seinturier](http://www.lifl.fr/~seinturi).
 
 ## Directory layout
 
-This repository is organized as follow:
+This repository is organized as follows:
 
 Directory                       | Description
 ------------------------------- | -----------------------------------------------------------------------------------------------
-[./ontologies/](./ontologies)   | Contains definition of all ontologies of the FUI Project StoreConnect
-[./tools/](./tools)             | Contains tools associated to StoreConnect's ontologies, as query server or visualization server 
+[ontologies](./ontologies)   | Contains the definitions of ontologies defined by the FUI Project StoreConnect
+[tools](./tools)             | Contains the tools supporting the StoreConnect ontologies, such as query server or visualization server 
 
 ## How to contribute
 
