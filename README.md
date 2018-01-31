@@ -1,6 +1,6 @@
-# FUI StoreConnect's ontologies
+# FUI StoreConnect's ontologies API
 
-This repository contains the ontologies definitions, endpoints and associated tools to the FUI [StoreConnect](https://www.pole-scs.org/projet/storeconnect) Project.
+This repository contains the definitions, endpoints and associated tools to the FUI [StoreConnect](https://www.pole-scs.org/projet/storeconnect) Project's ontology API part.
 
 ## Authors
 
@@ -13,8 +13,8 @@ This repository is organized as follows:
 Directory                       | Description
 ------------------------------- | -----------------------------------------------------------------------------------------------
 [ontologies](./ontologies)      | Contains the definitions of ontologies defined by the FUI Project StoreConnect
-[endpoints](./endpoints)        | Contains the endpoints implementing the StoreConnect ontologies, such as query server or visualization server
-[tools](./tools)                | Contains additional tools related to the StoreConnect ontologies 
+[endpoints](./endpoints)        | Contains the endpoints (APIs) implementing the StoreConnect ontologies, such as query server or visualization server
+[tools](./tools)                | Contains additional tools related to the StoreConnect ontologies API project
 
 ## How to contribute
 
