@@ -38,8 +38,8 @@ Based on this architecture, the StoreConnect's ontology can be represented as fo
 
 There are four ways to visualize this ontology:
 
-- By using its [dynamic representation](https://tinyurl.com/y9e2b9fb) (use the [StoreConnect's dynamic visualization server](../../tools/dynamic-visualization-server).
-- By using its [static representation](http://apiontologie.westeurope.cloudapp.azure.com:8080) (use the [StoreConnect's static visualization server](../../tools/static-visualization-server))
+- By using its [dynamic representation](https://tinyurl.com/y9e2b9fb) (use the [StoreConnect's dynamic visualization server](../../endpoints/dynamic-visualization-server).
+- By using its [static representation](http://apiontologie.westeurope.cloudapp.azure.com:8080) (use the [StoreConnect's static visualization server](../../endpoints/static-visualization-server))
 - By using the [Protégé](https://protege.stanford.edu/) tool and importing its associated [owl file](./storeconnect-main.owl)
 - By using some Protégé's plugins, as the [Protege's OntoGraf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf) and generate the associated image as defined in the [previous section](#specific-concepts)
 
@@ -68,7 +68,7 @@ Where `<path/to/the/original/storeconnect.dot>` is the path to the original [Pro
 
 ### Querying
 
-More information about ontology querying can be found in the [tools/query-server](../../tools/query-server) part.
+More information about ontology querying can be found in the [endpoints/query-server](../../endpoints/query-server) part.
 
 ### Examples of use
 
