@@ -6,7 +6,7 @@ In the rest of this document, the main FUI StoreConnect's ontology will be simpl
 
 ## Authors
 
-Aurélien Bourdon, Julien Duribreux, [Romain Rouvoy](http://romain.rouvoy.fr), [Lionel Seinturier](http://www.lifl.fr/~seinturi).
+[Aurélien Bourdon](https://github.com/abourdon), Julien Duribreux, [Romain Rouvoy](http://romain.rouvoy.fr), [Lionel Seinturier](http://www.lifl.fr/~seinturi).
 
 ## Version
 
