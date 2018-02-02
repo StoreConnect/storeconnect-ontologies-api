@@ -1,8 +1,7 @@
 version: '3'
 services:
     storeconnect-webvowl:
-        #image: visualdataweb/webvowl:latest (not available yet, see https://github.com/VisualDataWeb/WebVOWL/issues/111 for more detais)
-        image: abourdon/webvowl:latest
+        image: storeconnect/webvowl:latest
         container_name: storeconnect-webvowl
         ports:
             - "8081:8080"
