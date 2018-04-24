@@ -34,11 +34,22 @@ Store           | To massively load data                                        
 
 #### Server installation
 
-Simply execute from the console:
-
-    docker-compose up -d
-
+Docker composition is based on two services `storeconnect-postgis` ([PostgreSQL](https://www.postgresql.org/) with [Postgis](http://postgis.net/) extension) and `storeconnect-strabon` ([Strabon](http://www.strabon.di.uoa.gr/)) which later is dependent to the former. However, the current version of Strabon service does no wait until Postgis is correctly up.
+Thus, to correctly install the server you need to:
+1. Run the `storeconnect-postgis` service and wait until its initialization process is done by executing:
+    ```bash
+    $ docker-compose up -d storeconnect-postgis && docker-compose logs -f
+    ```
+2. Then run the `storeconnect-strabon` service and wait until its initialization process is done
+    ```bash
+    $ docker-compose up -d storeconnect-strabon && docker-compose logs -f
+    ```
+    
 _Note: The `-d` option starts composition's containers in background mode. Use the `--help` option for more details_
+
+After that, instances can be reached at:
+- `<docker host>:8890/strabon` for Strabon
+- `<docker host>:1111` for PostgreSQL with Postgis extension
 
 #### Server configuration
 
