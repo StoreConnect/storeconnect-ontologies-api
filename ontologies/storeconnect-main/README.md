@@ -10,7 +10,7 @@ In the rest of this document, the main FUI StoreConnect's ontology will be simpl
 
 ## Version
 
-1.0 
+1.0
 
 ## Definition
 
@@ -81,70 +81,81 @@ The following example describes how to:
 - Declare a new camera sensor (more precisely, a camera `sosa:Platform` that hosts a video tracker `sosa:Sensor`)
 - Register an observation of this camera sensor, that focuses on a motion of an object in a given store
 
-```ttl
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix sc: <http://storeconnect/> .
-@base <http://example.org/data/> .
+All with a [SPARQL Update query](https://www.w3.org/TR/sparql11-update/):
 
-# Motion observation is made from within a given store
+```sparql
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX sc: <http://storeconnect/>
+BASE <http://example.org/data/>
 
-<Store/1234> rdf:type sc:Store ;
-    rdfs:label "The specific '1234' Store from within a move can be observed"@en .
-
-# A camera can be seen as a sc:Camera sosa:Platform that hosts a sc:VideoTracker sosa:Sensor to track motion events
-
-<Camera/4567> rdf:type sc:Camera ;
-    rdfs:label "Camera - 4567"@en ;
-    rdfs:comment "Camera - @Id=4567"@en ;
-    sosa:hosts <videoTracker/7890> .
-
-<VideoTracker/7890> a sc:VideoTracker ;
-    rdfs:label "Video Tracker"@en ;
-    sosa:observes sc:Motion .
-
-# An observation made by the videoTracker/7890 sc:VideoTracker.
-
-<Observation/1234> rdf:type sosa:Observation ;
-    sosa:observedProperty sc:Motion ;
-    sosa:hasFeatureOfInterest  <Store/1234> ;
-    sosa:madeBySensor <VideoTracker/7890> ;
-    sosa:hasResult [
-        rdf:type sc:MotionEvent ;
-        sc:hasMotionSubject [
-            rdf:type sc:MotionSubject
-        ];
-        sc:hasMotionState [
-            rdf:type sc:Walking
-        ];
-        sc:hasOrientation [
-            rdf:type sc:Orientation ;
-            sc:orientation "124.923"^^xsd:float ;
-            sc:accuracy "0.87"^^xsd:float
-        ];
-        sc:hasSpeed [
-            rdf:type sc:Orientation ;
-            sc:speed "2.78"^^xsd:float ;
-            sc:accuracy "0.98"^^xsd:float
-        ];
-        sc:hasLocation [
-            rdf:type sc:Location ;
-            sc:floor "1"^^xsd:float ;
-            sc:hasPoint [
-                rdf:type geo:Point ;
-                geo:asWKT "POINT(45.99239 76.85746)"^^geo:wktLiteral
+INSERT DATA {
+    <Store/1234> rdf:type sc:Store ;
+        rdfs:label "The specific '1234' Store from within a move can be observed"@en .
+    
+    <Camera/4567> rdf:type sc:Camera ;
+        rdfs:label "Camera - 4567"@en ;
+        rdfs:comment "Camera - @Id=4567"@en ;
+        sosa:hosts <videoTracker/7890> .
+    
+    <VideoTracker/7890> a sc:VideoTracker ;
+        rdfs:label "Video Tracker"@en ;
+        sosa:observes sc:Motion .
+    
+    <Observation/1234> rdf:type sosa:Observation ;
+        sosa:observedProperty sc:Motion ;
+        sosa:hasFeatureOfInterest  <Store/1234> ;
+        sosa:madeBySensor <VideoTracker/7890> ;
+        sosa:hasResult [
+            rdf:type sc:MotionEvent ;
+            sc:hasMotionSubject [
+                rdf:type sc:MotionSubject
+            ];
+            sc:hasMotionState [
+                rdf:type sc:Walking
+            ];
+            sc:hasOrientation [
+                rdf:type sc:Orientation ;
+                sc:orientation "124.923"^^xsd:float ;
+                sc:accuracy "0.87"^^xsd:float
+            ];
+            sc:hasSpeed [
+                rdf:type sc:Orientation ;
+                sc:speed "2.78"^^xsd:float ;
+                sc:accuracy "0.98"^^xsd:float
+            ];
+            sc:hasLocation [
+                rdf:type sc:Location ;
+                sc:floor "1"^^xsd:float ;
+                sc:hasPoint [
+                    rdf:type geo:Point ;
+                    geo:asWKT "POINT(45.99239 76.85746)"^^geo:wktLiteral
+                ]
             ]
-        ]
-    ];
-    sosa:resultTime [
-        rdf:type time:Instant ;
-        time:inXSDDateTimeStamp "2017-06-06T12:36:13+00:00"^^xsd:dateTimeStamp 
-    ] .
+        ];
+        sosa:resultTime [
+            rdf:type time:Instant ;
+            time:inXSDDateTimeStamp "2017-06-06T12:36:13+00:00"^^xsd:dateTimeStamp 
+        ] .
+}
 ```
+
+By using the [StoreConnect's Ontologies API query server](../../endpoints/query-server), this request could be wrote as the following:
+
+```
+$ curl <query server endpoint>/strabon/Update \
+    --user <credentials>
+    --data 'query: <query>'
+```
+
+Where:
+- `<query server endpoint>` is the [StoreConnect's Ontologies API query server endpoint](../../endpoints/query-server)
+- `<credentials>` is your credentials against the StoreConnect's Ontologies API query server
+- `<query>` is the update query
 
 #### Example #2: Retrieve any motion event observation and its associated motion subject and location coordinates
 
@@ -157,66 +168,144 @@ PREFIX sc: <http://storeconnect/>
 
 SELECT DISTINCT ?observation ?subject ?coordinates
 WHERE {
-  # Give all sc:MotionEvent observations
-  ?observation a sosa:Observation .
-  ?observation sosa:hasResult ?result .
-  ?result a sc:MotionEvent .
-
-  # And retrieve from them their motion subject and associated location coordinates
-  ?result sc:hasMotionSubject ?subject .
-  ?result sc:hasLocation ?location .
-  ?location sc:hasPoint ?point .
-  ?point geo:asWKT ?coordinates .
+    # Give all sc:MotionEvent observations
+    ?observation a sosa:Observation .
+    ?observation sosa:hasResult ?result .
+    ?result a sc:MotionEvent .
+    
+    # And retrieve from them their motion subject and associated location coordinates
+    ?result sc:hasMotionSubject ?subject .
+    ?result sc:hasLocation ?location .
+    ?location sc:hasPoint ?point .
+    ?point geo:asWKT ?coordinates .
 }
 ```
 
-And could then provide the following result:
+And could then provide the following result (in `SPARQL/XML` format):
 
-![SPARQL result](resources/sparql-example2-result.png)
+```xml
+<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+    <head>
+        <variable name='observation'/>
+        <variable name='subject'/>
+        <variable name='coordinates'/>
+    </head>
+    <results>
+        <result>
+            <binding name='observation'>
+                <uri>http://example.org/data/Observation/1234</uri>
+            </binding>
+            <binding name='subject'>
+                <bnode>node1cbrrlfrpx25</bnode>
+            </binding>
+            <binding name='coordinates'>
+                <literal datatype='http://www.opengis.net/ont/geosparql#wktLiteral'>POINT(45.99239 76.85746)</literal>
+            </binding>
+        </result>
+    </results>
+</sparql>
+```
+
+By using the [StoreConnect's Ontologies API query server endpoint](../../endpoints/query-server), this request could be wrote as the following:
+
+```
+$ curl <query server endpoint>/strabon/Query \
+    --header 'Accept: application/json'
+    --data 'query: <query>'
+```
+
+Where:
+- `<query server endpoint>` is the [StoreConnect's Ontologies API query server endpoint](../../endpoints/query-server)
+- `<query>` is the query
 
 #### Example #3: Create similarity between two objects
 
 To express that two objects are similar, you can use the `sc:Similarity` concept.
 
-For instance, the following statements define that two motion subjects (`sc:MotionSubject`) are similar:
+For instance, the following [SPARQL Update query](https://www.w3.org/TR/sparql11-update/) defines that two motion subjects (`sc:MotionSubject`) are similar:
 
- ```ttl
- @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
- @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
- @prefix sc: <http://storeconnect/> .
- @base <http://example.org/data/> .
+```sparql
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX sc: <http://storeconnect/>
+BASE <http://example.org/data/>
  
- # Lets define our two sc:MotionSubject
- <MotionSubject/1234> rdf:type sc:MotionSubject .
- <MotionSubject/5678> rdf:type sc:MotionSubject .
- 
- # Now make them similar at 85%
- <MotionSubject/1234> sc:hasSimilarity [
-    rdf:type sc:Similarity ;
-    sc:isSimilarWith <MotionSubject/5678> ;
-    sc:accuracy "85.0"^^xsd:float
- ] .
+INSERT DATA {
+    # Lets define our two sc:MotionSubject
+    <MotionSubject/1234> rdf:type sc:MotionSubject .
+    <MotionSubject/5678> rdf:type sc:MotionSubject .
+    
+    # Now make them similar at 85 percent
+    <MotionSubject/1234> sc:hasSimilarity [
+        rdf:type sc:Similarity ;
+        sc:isSimilarWith <MotionSubject/5678> ;
+        sc:accuracy "85.0"^^xsd:float
+    ] .
+}
  ```
+ 
+By using the [StoreConnect's Ontologies API query server endpoint](../../endpoints/query-server), this request could be wrote as the following:
+
+```
+$ curl <query server endpoint>/strabon/Update \
+    --user <credentials>
+    --data 'query: <query>'
+```
+
+Where:
+- `<query server endpoint>` is the [StoreConnect's Ontologies API query server endpoint](../../endpoints/query-server)
+- `<credentials>` is your credentials against the StoreConnect's Ontologies API query server
+- `<query>` is the update query
  
 #### Example #4: Retrieve any similar object to a given one
 
 Now, based on the previous example, lets say we want to have all similar motion subjects to our `<MotionSubject/1234>` one. This could be expressed as the following [SPARQL](https://www.w3.org/TR/sparql11-query/) query:
 
 ```sparql
-BASE <http://example.org/data/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX sc: <http://storeconnect/>
+BASE <http://example.org/data/>
 
 SELECT DISTINCT ?similarSubject ?similarityWeight
 WHERE {
-  <MotionSubject/1234> sc:hasSimilarity ?similarity .
-  ?similarity sc:isSimilarWith ?similarSubject .
-  ?similarity sc:accuracy ?similarityWeight .
-  FILTER (?similarityWeight > "75"^^xsd:int) . 
+    <MotionSubject/1234> sc:hasSimilarity ?similarity .
+    ?similarity sc:isSimilarWith ?similarSubject .
+    ?similarity sc:accuracy ?similarityWeight .
+    FILTER (?similarityWeight > "75"^^xsd:float) . 
 }
-
 ```
 
-And then provide the following result:
+That could provide the following result (in `SPARQL/XML` format):
 
-![SPARQL result](resources/sparql-example4-result.png)
+```xml
+<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+    <head>
+        <variable name='similarSubject'/>
+        <variable name='similarityWeight'/>
+    </head>
+    <results>
+        <result>
+            <binding name='similarSubject'>
+                <uri>http://example.org/data/MotionSubject/5678</uri>
+            </binding>
+            <binding name='similarityWeight'>
+                <literal datatype='http://www.w3.org/2001/XMLSchema#float'>85.0</literal>
+            </binding>
+        </result>
+    </results>
+</sparql>
+```
+
+By using the [StoreConnect's Ontologies API Query-server Query endpoint](../../endpoints/query-server), this request could be wrote as the following:
+
+```
+$ curl <query server endpoint>/strabon/Query \
+    --header 'Accept: application/json'
+    --data 'query: <query>'
+```
+
+Where:
+- `<query server endpoint>` is the [StoreConnect's Ontologies API query server endpoint](../../endpoints/query-server)
+- `<query>` is the query

@@ -1,12 +1,45 @@
 version: '3'
 services:
-    storeconnect-virtuoso:
-        image: tenforce/virtuoso:1.3.1-virtuoso7.2.4
-        container_name: storeconnect-virtuoso
-        env_file:
-            - ./conf/virtuoso.env
+    storeconnect-strabon:
+        image: storeconnect/strabon:3.3.1
+        container_name: storeconnect-strabon
         ports:
-            - '1111:1111'
-            - '8890:8890'
+          - '8890:8080'
+        env_file:
+          - ./conf/strabon.env
+        depends_on:
+            - storeconnect-postgis
+    storeconnect-postgis:
+        image: mdillon/postgis:9.4-alpine
+        container_name: storeconnect-postgis
+        ports:
+          - '1111:5432'
+        env_file:
+          - ./conf/postgis.env
         volumes:
-            - './data:/data'
+          - './data/postgis:/var/lib/postgresql/data'
+        command: [
+          # Customize postgres with official Strabon configuration (http://www.strabon.di.uoa.gr/download.html)
+          "postgres",
+
+          # RAM settings (for 8GB RAM)
+          "-c", "shared_buffers=5GB",
+          "-c", "effective_cache_size=6GB",
+          "-c", "maintenance_work_mem=2GB",
+          "-c", "work_mem=5GB",
+
+          # HD settings (for SSD array)
+          "-c", "random_page_cost=2.0",
+
+          # Planner settings
+          "-c", "geqo_threshold=15",
+          "-c", "from_collapse_limit=14",
+          "-c", "join_collapse_limit=14",
+
+          # Misc settings
+          "-c", "default_statistics_target=10000",
+          "-c", "constraint_exclusion=on",
+          "-c", "checkpoint_completion_target=0.9",
+          "-c", "wal_buffers=32MB",
+          "-c", "checkpoint_segments=64"
+        ]
