@@ -67,6 +67,9 @@
         <NamedIndividual IRI="Stopping"/>
     </Declaration>
     <Declaration>
+        <Class IRI="SubjectThing"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Location"/>
     </Declaration>
     <Declaration>
@@ -94,13 +97,16 @@
         <Class IRI="SensorThing"/>
     </Declaration>
     <Declaration>
+        <Class IRI="PhysicalHumanCharacteristic"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Store"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BleBeacon"/>
+        <ObjectProperty IRI="hasIdentifier"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasIdentifier"/>
+        <Class IRI="BleBeacon"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="isWithin"/>
@@ -121,7 +127,16 @@
         <Class IRI="AccurateThing"/>
     </Declaration>
     <Declaration>
+        <Class IRI="BehavorialHumanCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Subject"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="StoreArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasHumanCharacteristic"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasSensorTimestamp"/>
@@ -136,6 +151,9 @@
         <Class IRI="MotionThing"/>
     </Declaration>
     <Declaration>
+        <Class IRI="HumanCharacteristic"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="StoreThing"/>
     </Declaration>
     <Declaration>
@@ -145,10 +163,10 @@
         <ObjectProperty IRI="hasPoint"/>
     </Declaration>
     <Declaration>
-        <Class IRI="StoreConnectThing"/>
+        <ObjectProperty IRI="hasOrientation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasOrientation"/>
+        <Class IRI="StoreConnectThing"/>
     </Declaration>
     <Declaration>
         <Class IRI="TechnicalThing"/>
@@ -169,28 +187,31 @@
         <Class IRI="Orientation"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasMotionSubject"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Motion"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="isSimilarWith"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasMotionSubject"/>
+        <Class IRI="KnownIdentifier"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasSpeed"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasInstant"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="VideoTracker"/>
     </Declaration>
     <Declaration>
-        <Class IRI="SpatialThing"/>
+        <ObjectProperty IRI="hasInstant"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasSensorEventTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SpatialThing"/>
     </Declaration>
     <Declaration>
         <Class IRI="Similarity"/>
@@ -199,16 +220,16 @@
         <ObjectProperty IRI="hasMotionState"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="storeConnectObjectProperty"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="speed"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Speed"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="browses"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Speed"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="floor"/>
@@ -217,13 +238,13 @@
         <Class IRI="MotionState"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasTimestamp"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasLocation"/>
     </Declaration>
     <Declaration>
         <Class IRI="Route"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasTimestamp"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="MotionState"/>
@@ -246,6 +267,10 @@
             <DataProperty IRI="accuracy"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BehavorialHumanCharacteristic"/>
+        <Class IRI="HumanCharacteristic"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="BleBeacon"/>
@@ -290,6 +315,10 @@
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="HumanCharacteristic"/>
+        <Class IRI="SubjectThing"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="IdentifiableThing"/>
         <Class IRI="TechnicalThing"/>
     </SubClassOf>
@@ -303,6 +332,10 @@
             <DataProperty IRI="identifier"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="KnownIdentifier"/>
+        <Class IRI="Identifier"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Location"/>
@@ -394,17 +427,14 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="MotionSubject"/>
+        <Class IRI="Subject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MotionSubject"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="browses"/>
             <Class IRI="Route"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="MotionSubject"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="hasIdentifier"/>
-            <Class IRI="Identifier"/>
-        </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="MotionThing"/>
@@ -424,6 +454,10 @@
             <DataProperty IRI="orientation"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PhysicalHumanCharacteristic"/>
+        <Class IRI="HumanCharacteristic"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Route"/>
@@ -517,6 +551,28 @@
         <Class IRI="BusinessThing"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Subject"/>
+        <Class IRI="SubjectThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Subject"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasHumanCharacteristic"/>
+            <Class IRI="HumanCharacteristic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Subject"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasIdentifier"/>
+            <Class IRI="Identifier"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SubjectThing"/>
+        <Class IRI="BusinessThing"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="TechnicalThing"/>
         <Class IRI="StoreConnectThing"/>
     </SubClassOf>
@@ -538,6 +594,10 @@
     </ClassAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="browses"/>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasHumanCharacteristic"/>
         <ObjectProperty IRI="storeConnectObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -625,6 +685,10 @@
         <Class IRI="MotionSubject"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasHumanCharacteristic"/>
+        <Class IRI="Subject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="hasIdentifier"/>
         <Class IRI="MotionSubject"/>
     </ObjectPropertyDomain>
@@ -675,6 +739,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="browses"/>
         <Class IRI="Route"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasHumanCharacteristic"/>
+        <Class IRI="HumanCharacteristic"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasIdentifier"/>
