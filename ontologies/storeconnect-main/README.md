@@ -34,6 +34,16 @@ Based on this architecture, the StoreConnect's ontology can be represented as fo
 
 ## Manipulation
 
+### Edition
+
+In order to edit this ontology, you need to have [Protégé](https://protege.stanford.edu/) installed.
+
+Once Protégé installed, then:
+- Clone this project
+- Open Protégé and import the ontology by using `File -> Open...`
+- Then select the `storeconnect-main.owl` file
+- Finally, follow the [contribution instructions](../../CONTRIBUTING.md) to share your changes
+
 ### Visualization
 
 There are four ways to visualize this ontology:
