@@ -67,7 +67,6 @@
 
     <owl:ObjectProperty rdf:about="http://storeconnect/hasIdentifier">
         <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
-        <rdfs:domain rdf:resource="http://storeconnect/MotionSubject"/>
         <rdfs:range rdf:resource="http://storeconnect/Identifier"/>
     </owl:ObjectProperty>
     
@@ -198,16 +197,6 @@
 
     <owl:ObjectProperty rdf:about="http://storeconnect/hasTimestamp">
         <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://storeconnect/isSimilarWith -->
-
-    <owl:ObjectProperty rdf:about="http://storeconnect/isSimilarWith">
-        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
-        <rdfs:domain rdf:resource="http://storeconnect/Similarity"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:ObjectProperty>
     
 

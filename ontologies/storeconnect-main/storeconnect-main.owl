@@ -199,9 +199,6 @@
         <Class IRI="Motion"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isSimilarWith"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="hasMotionSubject"/>
     </Declaration>
     <Declaration>
@@ -703,10 +700,6 @@
         <ObjectProperty IRI="storeConnectObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="isSimilarWith"/>
-        <ObjectProperty IRI="storeConnectObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="isWithin"/>
         <ObjectProperty IRI="storeConnectObjectProperty"/>
     </SubObjectPropertyOf>
@@ -725,10 +718,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasHumanCharacteristic"/>
         <Class IRI="Human"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasIdentifier"/>
-        <Class IRI="MotionSubject"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasLocation"/>
@@ -761,10 +750,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasSpeed"/>
         <Class IRI="MotionEvent"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isSimilarWith"/>
-        <Class IRI="Similarity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="isWithin"/>
@@ -817,10 +802,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasSpeed"/>
         <Class IRI="Speed"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isSimilarWith"/>
-        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="isWithin"/>
