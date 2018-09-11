@@ -131,7 +131,7 @@ INSERT DATA {
         sosa:hasResult [
             rdf:type sc:MotionEvent ;
             sc:hasMotionSubject [
-                rdf:type sc:MotionSubject
+                rdf:type sc:Human
             ];
             sc:hasMotionState [
                 rdf:type sc:Walking
