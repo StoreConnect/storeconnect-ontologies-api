@@ -81,13 +81,13 @@ Where:
     - `<ontology format>` = `RDF/XML`
     - `<ontology URL>` = `https://raw.githubusercontent.com/StoreConnect/storeconnect-ontologies-api/master/ontologies/storeconnect-main/storeconnect-main.rdf`
 
-**Important: Note the use of the `graph` parameter that defines the graph name where store the ontology. Always `http://storeconnect/`.**
+**Important: Note the use of the `graph` parameter that defines the graph name where store the ontology. Always `http://storeconnect/` (with the trailing `/`).**
 
 ##### Manually
 
 1. Access to the StoreConnect server's web form by browsing to `<docker host>:8090/strabon`, where `<docker host>` is the associated Docker host (`localhost` by default if using a native Docker installation)
 2. Access to the `Explore/Modify operations`/`Store` menu
-3. Type `http://storeconnect` in the `Graph` input
+3. Type `http://storeconnect/` in the `Graph` input (note the necessary trailing `/`)
 4. Choose the associated format of your ontology (for instance `RDF/XML`) 
 5. Copy/Paste your ontology in the `Direct input` field or precise the URI to your ontology in the `URI Input` field
 6. Following the way you define your ontology, click on `Store Input` or `Store from URI`.
