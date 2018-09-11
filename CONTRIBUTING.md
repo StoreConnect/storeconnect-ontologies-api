@@ -14,7 +14,8 @@ If contributing to ontologies, please also:
 
 1. Use the [Protégé](https://protege.stanford.edu/) tool for editing
 2. Generate both `owl/xml` and `rdf/xml` syntax of your ontology
-3. (Optionally) Generate an image of your ontology by:
-    1. Generating a raw [Protégé's Ontograf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf) DOT file
+3. Generate an image of your ontology by:
+    1. Generating a raw [Protégé's Ontograf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf) DOT file, **by expanding all StoreConnect notions** (and so have the first external notions displayed).
     2. Enhance it by using the [enhance-dot-ontograf tool](./tools/dot-ontograf-enhancer)
     3. Finally generate the image via the DOT suite tool (see [enhance-dot-ontograf tool](./tools/dot-ontograf-enhancer) for more details)
+4. Generate the HTML documentation of your ontology by following instructions [here](./endpoints/static-visualization-server/README.md#-generate-the-static-html-representation-of-an-ontology)

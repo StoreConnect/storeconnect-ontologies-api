@@ -53,6 +53,16 @@
     
 
 
+    <!-- http://storeconnect/hasHumanCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/hasHumanCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/Human"/>
+        <rdfs:range rdf:resource="http://storeconnect/HumanCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://storeconnect/hasIdentifier -->
 
     <owl:ObjectProperty rdf:about="http://storeconnect/hasIdentifier">
@@ -166,16 +176,6 @@
     
 
 
-    <!-- http://storeconnect/hasSimilarity -->
-
-    <owl:ObjectProperty rdf:about="http://storeconnect/hasSimilarity">
-        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="http://storeconnect/Similarity"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://storeconnect/hasSpeed -->
 
     <owl:ObjectProperty rdf:about="http://storeconnect/hasSpeed">
@@ -230,17 +230,17 @@
     
 
 
-    <!-- http://storeconnect/similarWith -->
-
-    <owl:ObjectProperty rdf:about="http://storeconnect/similarWith">
-        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://storeconnect/storeConnectObjectProperty -->
 
     <owl:ObjectProperty rdf:about="http://storeconnect/storeConnectObjectProperty"/>
+    
+
+
+    <!-- http://storeconnect/with -->
+
+    <owl:ObjectProperty rdf:about="http://storeconnect/with">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectObjectProperty"/>
+    </owl:ObjectProperty>
     
 
 
@@ -261,6 +261,16 @@
         <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectDataProperty"/>
         <rdfs:domain rdf:resource="http://storeconnect/Accurate"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://storeconnect/building -->
+
+    <owl:DatatypeProperty rdf:about="http://storeconnect/building">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectDataProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
@@ -325,6 +335,7 @@
 
     <owl:Class rdf:about="http://storeconnect/Accurate">
         <rdfs:subClassOf rdf:resource="http://storeconnect/AccurateThing"/>
+        <terms:description xml:lang="en">Use to represent something accurate. Any Accurate is associated with the numeracal value of the accuracy.</terms:description>
     </owl:Class>
     
 
@@ -340,6 +351,16 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">A owl:Thing related to the StoreConnect&apos;s Accurate notion.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/BehavorialHumanCharacteristic -->
+
+    <owl:Class rdf:about="http://storeconnect/BehavorialHumanCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/HumanCharacteristic"/>
+        <terms:description xml:lang="en">A behavorial characteristic to describe a Human.</terms:description>
     </owl:Class>
     
 
@@ -355,6 +376,7 @@
                 <owl:allValuesFrom rdf:resource="http://storeconnect/BleTracker"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">A sosa:Platform for Bluetooh Low Energy devices.</terms:description>
     </owl:Class>
     
 
@@ -364,6 +386,7 @@
     <owl:Class rdf:about="http://storeconnect/BleTracker">
         <rdfs:subClassOf rdf:resource="http://storeconnect/SensorThing"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <terms:description xml:lang="en">A sosa:Sensor of a BleBeacon used to track MotionEvent.</terms:description>
     </owl:Class>
     
 
@@ -372,6 +395,26 @@
 
     <owl:Class rdf:about="http://storeconnect/BusinessThing">
         <rdfs:subClassOf rdf:resource="http://storeconnect/StoreConnectThing"/>
+        <terms:description xml:lang="en">A owl:Thing related to the business part of the StoreConnect project.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/CEL -->
+
+    <owl:Class rdf:about="http://storeconnect/CEL">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/CELThing"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/MotionSubject"/>
+        <terms:description xml:lang="en">A CEL (Capacite d&apos;Emport Logistique in french) is the object that can be eventually owned by a MotionSubject when browsing a Route in a Store.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/CELThing -->
+
+    <owl:Class rdf:about="http://storeconnect/CELThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/SubjectThing"/>
+        <terms:description xml:lang="en">A owl:Thing related to the CEL notion.</terms:description>
     </owl:Class>
     
 
@@ -387,6 +430,41 @@
                 <owl:allValuesFrom rdf:resource="http://storeconnect/VideoTracker"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">A sosa:Platform for Camera devices</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/Human -->
+
+    <owl:Class rdf:about="http://storeconnect/Human">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/HumanThing"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/MotionSubject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/hasHumanCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/HumanCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A human being, likes any other human being.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/HumanCharacteristic -->
+
+    <owl:Class rdf:about="http://storeconnect/HumanCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/HumanThing"/>
+        <terms:description xml:lang="en">A physical or behavorial characteristic to describe a Human.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/HumanThing -->
+
+    <owl:Class rdf:about="http://storeconnect/HumanThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/SubjectThing"/>
+        <terms:description xml:lang="en">A owl:Thing related to the Human notion.</terms:description>
     </owl:Class>
     
 
@@ -395,6 +473,7 @@
 
     <owl:Class rdf:about="http://storeconnect/IdentifiableThing">
         <rdfs:subClassOf rdf:resource="http://storeconnect/TechnicalThing"/>
+        <terms:description xml:lang="en">A owl:Thing that can be identifiable in the StoreConnect project.</terms:description>
     </owl:Class>
     
 
@@ -410,6 +489,16 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">A generic identifier to a owl:Thing.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/KnownIdentifier -->
+
+    <owl:Class rdf:about="http://storeconnect/KnownIdentifier">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/Identifier"/>
+        <terms:description xml:lang="en">A specific identifier that represents a owl:Thing that is already known. For instance, a customer which is already known by a Store.</terms:description>
     </owl:Class>
     
 
@@ -435,11 +524,19 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/building"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://storeconnect/floor"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">A location within a StoreArea. Represented by a geosparql:Point, a floor identifier and a building identifier.</terms:description>
     </owl:Class>
     
 
@@ -449,6 +546,7 @@
     <owl:Class rdf:about="http://storeconnect/Motion">
         <rdfs:subClassOf rdf:resource="http://storeconnect/MotionThing"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <terms:description xml:lang="en">A Motion is a specific observation type of a Sensor. A Motion represents a move of a Subject. The observation result of a Move is a MotionEvent.</terms:description>
     </owl:Class>
     
 
@@ -493,6 +591,7 @@
                 <owl:onClass rdf:resource="http://storeconnect/Speed"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">The result of a Motion observation by a Sensor.</terms:description>
     </owl:Class>
     
 
@@ -509,6 +608,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://storeconnect/MotionThing"/>
+        <terms:description xml:lang="en">A state of a Motion. Can be either Stopping (i.e. no move) or Running (i.e. moving).</terms:description>
     </owl:Class>
     
 
@@ -517,19 +617,14 @@
 
     <owl:Class rdf:about="http://storeconnect/MotionSubject">
         <rdfs:subClassOf rdf:resource="http://storeconnect/MotionThing"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/Subject"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://storeconnect/browses"/>
                 <owl:someValuesFrom rdf:resource="http://storeconnect/Route"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://storeconnect/hasIdentifier"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://storeconnect/Identifier"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A Subject of a Motion observation made by a Sensor.</terms:description>
     </owl:Class>
     
 
@@ -538,6 +633,7 @@
 
     <owl:Class rdf:about="http://storeconnect/MotionThing">
         <rdfs:subClassOf rdf:resource="http://storeconnect/BusinessThing"/>
+        <terms:description xml:lang="en">A owl:Thing related to the StoreConnect&apos;s Motion notion.</terms:description>
     </owl:Class>
     
 
@@ -554,6 +650,16 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represent an orientation. Mainly used to add information about a MotionEvent.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/PhysicalHumanCharacteristic -->
+
+    <owl:Class rdf:about="http://storeconnect/PhysicalHumanCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/HumanCharacteristic"/>
+        <terms:description xml:lang="en">A physical characteristic to describe a Human.</terms:description>
     </owl:Class>
     
 
@@ -568,6 +674,7 @@
                 <owl:someValuesFrom rdf:resource="http://storeconnect/MotionEvent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">A Route is the path that is followed by a MotionSubject when moving into a Store. Any piece of Route has to be included into a StoreArea.</terms:description>
     </owl:Class>
     
 
@@ -576,6 +683,7 @@
 
     <owl:Class rdf:about="http://storeconnect/RouteThing">
         <rdfs:subClassOf rdf:resource="http://storeconnect/BusinessThing"/>
+        <terms:description xml:lang="en">A owl:Thing related to the StoreConnect&apos;s Route notion.</terms:description>
     </owl:Class>
     
 
@@ -584,6 +692,7 @@
 
     <owl:Class rdf:about="http://storeconnect/SensorThing">
         <rdfs:subClassOf rdf:resource="http://storeconnect/BusinessThing"/>
+        <terms:description xml:lang="en">A owl:Thing related to the sosa:Sensor or sosa:Platform notion.</terms:description>
     </owl:Class>
     
 
@@ -595,10 +704,11 @@
         <rdfs:subClassOf rdf:resource="http://storeconnect/IdentifiableThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://storeconnect/isSimilarWith"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:onProperty rdf:resource="http://storeconnect/with"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represent a similarity between at least two owl:Thing. Some things are similar if we can regroup them and give a &quot;similarity score&quot; between them (accuracy).</terms:description>
     </owl:Class>
     
 
@@ -607,6 +717,7 @@
 
     <owl:Class rdf:about="http://storeconnect/SpatialThing">
         <rdfs:subClassOf rdf:resource="http://storeconnect/TechnicalThing"/>
+        <terms:description xml:lang="en">A owl:Thing that can be related to something spatial into the StoreConnect project.</terms:description>
     </owl:Class>
     
 
@@ -623,6 +734,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represent a velocity. Mainly used to add information about a MotionEvent.</terms:description>
     </owl:Class>
     
 
@@ -638,6 +750,7 @@
                 <owl:someValuesFrom rdf:resource="http://storeconnect/StoreArea"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">As its name indicates, A Store represents the store place. A Store is commonly composed of several StoreArea, from within a Route can be defined.</terms:description>
     </owl:Class>
     
 
@@ -655,13 +768,16 @@
                 <owl:onClass rdf:resource="http://storeconnect/Identifier"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">A part of a Store.</terms:description>
     </owl:Class>
     
 
 
     <!-- http://storeconnect/StoreConnectThing -->
 
-    <owl:Class rdf:about="http://storeconnect/StoreConnectThing"/>
+    <owl:Class rdf:about="http://storeconnect/StoreConnectThing">
+        <terms:description xml:lang="en">A owl:Thing related to the StoreConnect project.</terms:description>
+    </owl:Class>
     
 
 
@@ -669,6 +785,31 @@
 
     <owl:Class rdf:about="http://storeconnect/StoreThing">
         <rdfs:subClassOf rdf:resource="http://storeconnect/BusinessThing"/>
+        <terms:description xml:lang="en">A owl:Thing related to the StoreConnect&apos;s Store notion.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/Subject -->
+
+    <owl:Class rdf:about="http://storeconnect/Subject">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/SubjectThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://storeconnect/hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="http://storeconnect/Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">The target of a Sensor.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/SubjectThing -->
+
+    <owl:Class rdf:about="http://storeconnect/SubjectThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/BusinessThing"/>
+        <terms:description xml:lang="en">A owl:Thing related to the StoreConnect&apos;s Subject notion.</terms:description>
     </owl:Class>
     
 
@@ -677,6 +818,7 @@
 
     <owl:Class rdf:about="http://storeconnect/TechnicalThing">
         <rdfs:subClassOf rdf:resource="http://storeconnect/StoreConnectThing"/>
+        <terms:description xml:lang="en">A owl:Thing related to the technical part of the StoreConnect project.</terms:description>
     </owl:Class>
     
 
@@ -686,6 +828,7 @@
     <owl:Class rdf:about="http://storeconnect/VideoTracker">
         <rdfs:subClassOf rdf:resource="http://storeconnect/SensorThing"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <terms:description xml:lang="en">A sosa:Sensor of a Camera used to track MotionEvent.</terms:description>
     </owl:Class>
     
 

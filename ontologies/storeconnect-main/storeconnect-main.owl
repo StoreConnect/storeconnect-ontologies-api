@@ -61,10 +61,10 @@
         <DataProperty IRI="identifier"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="similarWith"/>
+        <NamedIndividual IRI="Stopping"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Stopping"/>
+        <Class IRI="HumanThing"/>
     </Declaration>
     <Declaration>
         <Class IRI="SubjectThing"/>
@@ -82,16 +82,10 @@
         <Class IRI="RouteThing"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasSimilarity"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="accuracy"/>
     </Declaration>
     <Declaration>
         <Class IRI="MotionSubject"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasShopArea"/>
     </Declaration>
     <Declaration>
         <Class IRI="SensorThing"/>
@@ -100,13 +94,16 @@
         <Class IRI="PhysicalHumanCharacteristic"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasShopArea"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Store"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasIdentifier"/>
+        <Class IRI="BleBeacon"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BleBeacon"/>
+        <ObjectProperty IRI="hasIdentifier"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="isWithin"/>
@@ -169,7 +166,13 @@
         <Class IRI="StoreConnectThing"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Human"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="TechnicalThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="with"/>
     </Declaration>
     <Declaration>
         <Class IRI="Camera"/>
@@ -181,13 +184,13 @@
         <Class IRI="Identifier"/>
     </Declaration>
     <Declaration>
+        <Class IRI="CELThing"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="BleTracker"/>
     </Declaration>
     <Declaration>
         <Class IRI="Orientation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasMotionSubject"/>
     </Declaration>
     <Declaration>
         <Class IRI="Motion"/>
@@ -196,10 +199,13 @@
         <ObjectProperty IRI="isSimilarWith"/>
     </Declaration>
     <Declaration>
-        <Class IRI="KnownIdentifier"/>
+        <ObjectProperty IRI="hasMotionSubject"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasSpeed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="KnownIdentifier"/>
     </Declaration>
     <Declaration>
         <Class IRI="VideoTracker"/>
@@ -208,10 +214,10 @@
         <ObjectProperty IRI="hasInstant"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasSensorEventTimestamp"/>
+        <Class IRI="SpatialThing"/>
     </Declaration>
     <Declaration>
-        <Class IRI="SpatialThing"/>
+        <ObjectProperty IRI="hasSensorEventTimestamp"/>
     </Declaration>
     <Declaration>
         <Class IRI="Similarity"/>
@@ -220,16 +226,19 @@
         <ObjectProperty IRI="hasMotionState"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="storeConnectObjectProperty"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="speed"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="storeConnectObjectProperty"/>
+        <Class IRI="Speed"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="browses"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Speed"/>
+        <Class IRI="CEL"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="floor"/>
@@ -241,10 +250,10 @@
         <ObjectProperty IRI="hasTimestamp"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasLocation"/>
+        <Class IRI="Route"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Route"/>
+        <ObjectProperty IRI="hasLocation"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="MotionState"/>
@@ -300,6 +309,18 @@
         <Class IRI="StoreConnectThing"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="CEL"/>
+        <Class IRI="CELThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CEL"/>
+        <Class IRI="MotionSubject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CELThing"/>
+        <Class IRI="SubjectThing"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="Camera"/>
         <Class IRI="SensorThing"/>
     </SubClassOf>
@@ -315,7 +336,26 @@
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Human"/>
+        <Class IRI="HumanThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Human"/>
+        <Class IRI="MotionSubject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Human"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasHumanCharacteristic"/>
+            <Class IRI="HumanCharacteristic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="HumanCharacteristic"/>
+        <Class IRI="HumanThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="HumanThing"/>
         <Class IRI="SubjectThing"/>
     </SubClassOf>
     <SubClassOf>
@@ -488,10 +528,9 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Similarity"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="isSimilarWith"/>
-            <Class abbreviatedIRI="owl:Thing"/>
-        </ObjectSomeValuesFrom>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="with"/>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="SpatialThing"/>
@@ -553,13 +592,6 @@
     <SubClassOf>
         <Class IRI="Subject"/>
         <Class IRI="SubjectThing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Subject"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="hasHumanCharacteristic"/>
-            <Class IRI="HumanCharacteristic"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Subject"/>
@@ -649,10 +681,6 @@
         <ObjectProperty IRI="storeConnectObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasSimilarity"/>
-        <ObjectProperty IRI="storeConnectObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="hasSpeed"/>
         <ObjectProperty IRI="storeConnectObjectProperty"/>
     </SubObjectPropertyOf>
@@ -677,7 +705,7 @@
         <ObjectProperty IRI="storeConnectObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="similarWith"/>
+        <ObjectProperty IRI="with"/>
         <ObjectProperty IRI="storeConnectObjectProperty"/>
     </SubObjectPropertyOf>
     <ObjectPropertyDomain>
@@ -686,7 +714,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasHumanCharacteristic"/>
-        <Class IRI="Subject"/>
+        <Class IRI="Human"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasIdentifier"/>
@@ -719,10 +747,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasShopArea"/>
         <Class IRI="Store"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasSimilarity"/>
-        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasSpeed"/>
@@ -779,10 +803,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasShopArea"/>
         <Class IRI="StoreArea"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasSimilarity"/>
-        <Class IRI="Similarity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasSpeed"/>
@@ -852,6 +872,66 @@
         <DataProperty IRI="speed"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>BehavorialHumanCharacteristic</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A behavorial characteristic to describe a Human.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>BusinessThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A owl:Thing related to the business part of the StoreConnect project.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>CEL</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A CEL (Capacite d&apos;Emport Logistique in french) is the object that can be eventually owned by a MotionSubject when browsing a Route in a Store.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>CELThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A owl:Thing related to the CEL notion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>Human</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A human being, likes any other human being.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>HumanCharacteristic</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A physical or behavorial characteristic to describe a Human.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>HumanThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A owl:Thing related to the Human notion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>MotionSubject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A target of a Sensor in motion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>PhysicalHumanCharacteristic</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A physical characteristic to describe a Human.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>StoreConnectThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A owl:Thing related to the StoreConnect project.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>Subject</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The target of a Sensor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>SubjectThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A owl:Thing related to the Subject notion.</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
         <IRI>#Accurate</IRI>
