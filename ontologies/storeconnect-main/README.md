@@ -32,6 +32,8 @@ Based on this architecture, the StoreConnect's ontology can be represented as fo
 
 ![StoreConnect architecture](./resources/storeconnect-main.png)
 
+More information about those concepts can be found in [the various visualizations](#visualization) of this ontology.
+
 ## Manipulation
 
 ### Edition
