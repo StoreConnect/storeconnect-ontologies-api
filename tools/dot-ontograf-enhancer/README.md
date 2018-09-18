@@ -1,4 +1,4 @@
-# Protege's Ontgraf plugin DOT generation enhancer 
+# Protege's Ontograf plugin DOT generation enhancer 
 
 Enhance [DOT](https://graphviz.gitlab.io/_pages/doc/info/lang.html) graph produced by the [Protege's OntoGraf plugin](https://protegewiki.stanford.edu/wiki/OntoGraf).
 
